@@ -1,0 +1,17 @@
+.header
+    .container
+        .header-top
+            .header-top__logo
+                a(href='/'): span.bgimage(style="background-image: url('/img/common/logo.svg')") 
+            .header-top__nav 
+                nav
+                    ul 
+                        each item in app.mainMenu
+                            li: a(href=item.href)= item.text
+            .header-top__button
+                button.btn Обратная связь
+
+            .header-top__burger
+                .burger-button(data-menu="btn")
+                    span
+                    span 

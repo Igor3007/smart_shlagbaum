@@ -1,0 +1,117 @@
+.header {
+    background-color: transparent;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-top {
+
+    padding: 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $w1440) {
+        padding: 20px 0;
+    }
+
+
+    &__logo {
+
+        margin-right: 16px;
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+
+        & .bgimage {
+            width: 263px;
+            height: 32px;
+            @include bgimage-contain;
+            background-position: left center;
+
+            @media screen and (min-width: $w1440) {
+                width: 381px;
+                height: 48px;
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        @media screen and (min-width: $w992) {
+            display: flex;
+
+            margin-right: auto;
+            align-items: center;
+
+            & ul {
+                display: flex;
+
+                & li {
+                    padding: 0 1em;
+                }
+            }
+        }
+
+
+    }
+
+    &__button {
+        display: none;
+
+        @media screen and (min-width: $w992) {
+            display: block;
+        }
+    }
+
+    &__burger {
+        @media screen and (min-width: $w992) {
+            display: none;
+        }
+    }
+
+}
+
+.burger-button {
+    width: 41px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.8s ease;
+    cursor: pointer;
+
+    & span {
+        width: 24px;
+        height: 2px;
+        background-color: $main;
+        margin: 3px 0;
+        border-radius: 5px;
+        transition: 0.3s ease 0.5s;
+        transform: rotate(0);
+    }
+
+    &.open {
+
+        transform: rotate(450deg);
+
+
+        & span {
+
+            margin: -1px 1px -1px -1px;
+
+
+            &:first-child {
+                transform: rotate(45deg);
+                transition: 0.3s ease;
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+                transition: 0.3s ease;
+            }
+        }
+
+
+    }
+}
