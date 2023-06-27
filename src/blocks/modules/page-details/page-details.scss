@@ -1,0 +1,26 @@
+.page-details {
+    display: flex;
+
+    &__aside {
+        border-right: 1px solid #E2E6EB;
+        width: 100%;
+        max-width: 360px;
+        padding-top: 40px;
+        padding-right: 40px;
+        box-sizing: border-box;
+    }
+
+    &__content {
+        padding: 80px;
+        padding-right: 32px;
+    }
+
+    &__wrp {
+        display: flex;
+    }
+
+    &__sidebar {
+        max-width: 410px;
+        width: 100%;
+    }
+}

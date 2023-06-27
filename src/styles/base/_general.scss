@@ -340,7 +340,7 @@ input[type="date"] {
 
             position: relative;
             padding-left: 20px;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
 
             @media screen and (min-width: $w760) {
                 padding-left: 25px;
@@ -380,7 +380,7 @@ input[type="date"] {
             counter-increment: number-list 1;
             list-style-type: none;
             position: relative;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #000;
             padding-left: 20px;
             font-size: 14px;
@@ -514,9 +514,9 @@ input[type="date"] {
 
 
 @mixin font-h1 {
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 121%;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 115%;
 
     @media screen and (min-width: $w760) {
         font-size: 28px;

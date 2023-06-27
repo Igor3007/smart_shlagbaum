@@ -34,8 +34,8 @@
     & li {
 
         & a {
-            color: #000;
-            font-size: 13px;
+            color: var(--text-02);
+            font-size: 15px;
 
             &:hover {
                 color: $accent-2-1;
@@ -43,7 +43,7 @@
         }
 
         & span {
-            font-size: 13px;
+            font-size: 15px;
         }
 
         &::after {
@@ -68,7 +68,7 @@
 
             & span,
             & a {
-                color: $gray-56;
+                color: var(--text-01)
             }
         }
 

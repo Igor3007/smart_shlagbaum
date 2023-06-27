@@ -1,0 +1,38 @@
+mixin aside-nav(active)
+
+    - 
+        const asidenav = [
+            'Распознавание спецтранспорта',
+            'Распознавание госномеров и гражданских ТС',
+            'Вспомогательные методы открытия',
+            'Видеонаблюдение и видеоаналитика',
+            'Надёжное конечное устройство',
+            'Дворы многоквартирных домов',
+            'Многоуровневые и плоскостные паркинги',
+            'Дачные и коттеджные поселки',
+            'Торговые центры, магазины и рестораны',
+            'Гостиницы и дома отдыха',
+            'Промышленные, складские и логистческие центры',
+        ]
+
+    .aside-nav
+        .aside-nav__list
+            nav
+                ul
+                    each item in asidenav
+                        li(class=item == active ? 'active':''): a(href='#')= item
+
+
+
+mixin aside-info()
+    .aside-info
+        .aside-info__title 
+            +icons('#ic_feature', 32)
+            span Особенности системы
+        .aside-info__desc Единственная нейросеть на рынке, распознающая спецтранспорт с минимальной погрешностью < 0,18% - 0,36%
+
+mixin aside-banner()
+    .aside-banner
+        .aside-banner__image
+            picture
+                img(src="/img/detail/banner-sidebar.jpg")

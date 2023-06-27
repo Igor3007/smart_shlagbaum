@@ -1,0 +1,40 @@
+.banner-top {
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--bg-01);
+
+    &__image {
+        flex-grow: 1;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        max-width: 50%;
+
+        & img {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        flex-grow: 1;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYwIiBoZWlnaHQ9IjIwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMDBWMGg5My42N0wwIDIwMHptNDEuNDA1IDBIOTYwTDg1NS40NTkgMi4xMzFBNCA0IDAgMDA4NTEuOTIyIDBIMTM1LjA3NWwtOTMuNjcgMjAweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==);
+        padding-left: 150px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left bottom;
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: $w1440) {
+            min-height: 185px;
+        }
+
+        & h1 {
+            @include font-h1;
+            max-width: 640px;
+            margin: 0;
+        }
+    }
+}
