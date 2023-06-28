@@ -1,0 +1,71 @@
+mixin first-block
+
+    -
+        const fb = [
+            {
+                title: 'Распознавание спецтранспорта',
+                list: [
+                    'Скорая помощь',
+                    'Полиция',
+                    'Пожарная машина',
+                    'Аварийные службы',
+                    'Коммунальная техника',
+                    'Почта России',
+                ],
+                img: '/img/common/bg-img-1-mobile.jpg'
+            },
+            {
+                title: 'Распознавание гражданских ТС:',
+                list: [
+                    'Госномер',
+                    'Марка',
+                    'Модель',
+                    'Цвет транспорта',
+                ],
+                img: '/img/common/bg-img-2-mobile.jpg'
+            },
+            {
+                title: 'Вспомогательные методы открытия',
+                list: [
+                    'Телефонный вызов',
+                    'Мобильное приложение',
+                    'Гибкая, адаптивная система пропусков',
+                    'FRID карты/метки',
+                    'Именные пульты',
+                    'Система удалённой диспетчеризации КПП',
+                ],
+                img: '/img/common/bg-img-3-mobile.jpg'
+            },
+            {
+                title: 'Видеонаблюдение и видеоаналитика',
+                list: [
+                    'Облачная видеотрансляция',
+                    'Облачный видеоархив',
+                    'Логирование изображений',
+                    'Привязка видеофрагментов к событиям',
+                    
+                ],
+                img: '/img/common/bg-img-4-mobile.jpg'
+            }
+        ]
+
+    .section-first-block
+        .first-block
+            .first-block__items
+                each item in fb
+                    .first-block__item
+                        +card-fb(item)
+
+mixin card-fb(data)
+    .card-fb
+        .card-fb__main
+            .card-fb__title= data.title
+            .card-fb__list
+                ul
+                    each li in data.list 
+                        li= li
+                    
+            .card-fb__button
+               button.btn.btn-special: span Подробнее
+        .card-fb__image
+            +bgimage(data.img)
