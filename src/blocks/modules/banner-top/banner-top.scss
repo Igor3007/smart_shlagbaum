@@ -1,7 +1,16 @@
+.section-banner-top {
+    background-color: var(--bg-01);
+
+}
+
 .banner-top {
     display: flex;
     align-items: flex-end;
-    background-color: var(--bg-01);
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-top: 25px;
+
+
 
     &__image {
         flex-grow: 1;
@@ -17,24 +26,47 @@
 
     &__title {
         flex-grow: 1;
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYwIiBoZWlnaHQ9IjIwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMDBWMGg5My42N0wwIDIwMHptNDEuNDA1IDBIOTYwTDg1NS40NTkgMi4xMzFBNCA0IDAgMDA4NTEuOTIyIDBIMTM1LjA3NWwtOTMuNjcgMjAweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==);
-        padding-left: 150px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTY1NiIgaGVpZ2h0PSIyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTY5NiAyMDBILS41Vi41NzRMNzg5LjY3IDAgNjk2IDIwMHptNDEuNDA1IDBIMTY1NkwxNTUxLjQ2IDIuMTMxYTQuMDE4IDQuMDE4IDAgMDAtMS40Ny0xLjU1NyA0LjAzIDQuMDMgMCAwMC0yLjA3LS41NzRIODMxLjA3NWwtOTMuNjcgMjAweiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik02OTYgMjAwSC0uNVYuNTc0TDc4OS42NyAwIDY5NiAyMDB6bTQxLjQwNSAwSDE2NTZMMTU1MS40NiAyLjEzMWE0LjAxOCA0LjAxOCAwIDAwLTEuNDctMS41NTcgNC4wMyA0LjAzIDAgMDAtMi4wNy0uNTc0SDgzMS4wNzVsLTkzLjY3IDIwMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=);
+        padding-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: left bottom;
+        background-size: auto 100%;
+        background-position: right bottom;
         display: flex;
         align-items: center;
+        padding-right: 40px;
 
         @media screen and (min-width: $w1440) {
+            min-height: 198px;
+            padding-left: 160px;
+        }
+
+        @media screen and (min-width: $w1200) {
             min-height: 185px;
+            padding-left: 120px;
+        }
+
+        @media screen and (min-width: $w992) {
+            min-height: 120px;
+            padding-left: 80px;
+        }
+
+        @media screen and (min-width: $w760) {
+            min-height: 80px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 80px;
         }
 
         & h1 {
             @include font-h1;
             max-width: 640px;
             margin: 0;
+
+            @media screen and (max-width: $w480) {
+                font-size: 20px;
+            }
         }
     }
 }

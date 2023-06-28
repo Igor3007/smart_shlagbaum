@@ -99,8 +99,13 @@
         flex-direction: column;
         transition: 0.3s ease;
 
+        @media screen and (min-width: $w760) {
+            padding: 24px;
+            display: block;
+        }
+
         &:hover {
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: var(--main);
         }
     }
 

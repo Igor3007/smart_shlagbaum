@@ -29,14 +29,21 @@ footer {
 
 .footer-top {
     display: flex;
+    flex-wrap: wrap;
 
+    @media screen and (min-width: $w992) {
+        flex-wrap: nowrap;
+    }
 
 }
 
 .footer-menu {
-    @media screen and (min-width: $w760) {
-        display: flex;
-        flex-wrap: wrap;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @media screen and (min-width: $w992) {
         justify-content: space-around;
     }
 
@@ -55,7 +62,7 @@ footer {
         &--about {
             display: none;
 
-            @media screen and (min-width: $w992) {
+            @media screen and (min-width: $w1200) {
                 display: block;
 
             }

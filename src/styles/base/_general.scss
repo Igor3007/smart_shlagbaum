@@ -54,6 +54,7 @@ body {
     --blue-light: #A8AFC9;
     --blue-medium: #515E93;
     --blue-dark: #253678;
+    --main: #253678;
     --stroke: #E2E6EB;
     --bg-01: #ECF0F5;
     --text-03: #A9ACB8;
@@ -167,7 +168,7 @@ input[type="date"] {
 
     @media screen and (min-width: $w480) {
         padding: 0 16px;
-        max-width: 400px;
+        max-width: 100%;
     }
 
     @media screen and (min-width: $w576) {
@@ -182,12 +183,12 @@ input[type="date"] {
 
     @media screen and (min-width: $w992) {
         padding: 0 30px;
-        max-width: 990px;
+        max-width: 100%;
     }
 
     @media screen and (min-width: $w1200) {
         padding: 0 30px;
-        max-width: 1200px;
+        max-width: 100%;
     }
 
     @media screen and (min-width: $w1440) {
@@ -515,7 +516,7 @@ input[type="date"] {
 
 @mixin font-h1 {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 115%;
 
     @media screen and (min-width: $w760) {
@@ -523,6 +524,10 @@ input[type="date"] {
     }
 
     @media screen and (min-width: $w1200) {
+        font-size: 36px;
+    }
+
+    @media screen and (min-width: $w1440) {
         font-size: 44px;
     }
 }

@@ -1,3 +1,17 @@
+@keyframes goto {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 .aside-info {
     padding: 40px 0;
     border-bottom: 1px solid #E2E6EB;
@@ -26,6 +40,11 @@
 .aside-nav {
 
     padding: 40px 0;
+    display: none;
+
+    @media screen and (min-width: $w992) {
+        display: block;
+    }
 
     &__list {
         & li {
@@ -34,11 +53,15 @@
             align-items: center;
 
             & a {
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 155%;
                 font-weight: 500;
                 color: var(--text-01, #222429);
                 transition: 0.3s ease;
+
+                @media screen and (min-width: $w1440) {
+                    font-size: 18px;
+                }
 
                 &:hover {
                     color: var(--blue-dark, #253678);
@@ -56,14 +79,20 @@
                 &::before {
                     content: '';
                     margin-right: 12px;
-                    width: 24px;
-                    height: 24px;
+                    width: 18px;
+                    height: 18px;
                     position: relative;
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
                     display: inline-block;
                     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTkgMTlsNy03LTctNyIgc3Ryb2tlPSIjMjUzNjc4IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==);
+
+                    @media screen and (min-width: $w1440) {
+                        width: 24px;
+                        height: 24px;
+                    }
+
                 }
             }
         }
@@ -74,5 +103,53 @@
 }
 
 .aside-banner {
-    padding-bottom: 80px;
+    padding-bottom: 30px;
+
+
+    @media screen and (min-width: $w1440) {
+        padding-bottom: 80px;
+    }
+
+    &__image {
+
+        border-radius: 6px;
+        overflow: hidden;
+
+        & a {
+            display: flex;
+            position: relative;
+            background-color: #253678;
+
+            & img {
+                transition: 0.3s ease;
+            }
+
+            &:hover {
+
+
+                & img {
+                    opacity: 0;
+                }
+
+                &::before {
+                    animation: goto 1s ease infinite;
+                }
+            }
+
+            &::before {
+                content: '';
+                width: 24px;
+                height: 24px;
+                display: block;
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+                z-index: 2;
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTS4yOTMuMjkzYTEgMSAwIDAxMS40MTQgMGw3IDdhMSAxIDAgMDEwIDEuNDE0bC03IDdhMSAxIDAgMDEtMS40MTQtMS40MTRMNi41ODYgOCAuMjkzIDEuNzA3YTEgMSAwIDAxMC0xLjQxNHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=);
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: 1s ease;
+            }
+        }
+    }
 }
