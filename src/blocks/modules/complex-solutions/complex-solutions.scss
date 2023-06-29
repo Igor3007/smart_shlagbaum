@@ -75,6 +75,7 @@
             background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTkgMTlsNy03LTctNyIgc3Ryb2tlPSIjMjIyNDI5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==);
             background-position: center;
             background-repeat: no-repeat;
+            transition: transform 0.3s ease;
         }
 
         @media screen and (min-width: $w992) {
@@ -133,7 +134,8 @@
 
                 &::after {
 
-                    opacity: 0;
+                    filter: grayscale(200) brightness(300);
+                    transform: translateX(10px);
                 }
 
                 & a {
