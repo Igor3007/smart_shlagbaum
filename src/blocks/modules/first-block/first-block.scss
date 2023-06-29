@@ -1,0 +1,517 @@
+@keyframes card-fb-to-fade {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes device-fb-to-fade {
+    to {
+        opacity: 1;
+    }
+}
+
+.section-first-block {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.fb-device-overlay {
+    @media screen and (min-width: $w992) {
+        position: fixed;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(37, 54, 120, 0.89);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: 0.5s ease;
+    }
+}
+
+.first-block {
+
+    position: relative;
+
+    &__device {
+        @media screen and (min-width: $w992) {
+            &:hover {
+                & .fb-device-overlay {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 4px;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 4px;
+
+        @media screen and (min-width: $w760) {
+            width: 50%;
+        }
+
+        @media screen and (min-width: $w760) {
+
+            &:nth-child(2n) {
+                & .card-fb {
+                    flex-direction: row-reverse;
+
+                    &__title {
+                        text-align: right;
+                        margin-left: auto;
+                    }
+
+                    &__image {
+                        @media screen and (min-width: $w1200) {
+                            right: auto;
+                            left: 0;
+                        }
+                    }
+
+                    &__button {
+
+                        margin-left: 0;
+                        margin-right: -24px;
+
+                        @media screen and (min-width: $w1440) {
+                            margin-right: -72px;
+                        }
+
+                        & .btn.btn-special {
+                            justify-content: flex-start;
+                            transform: translateX(25px);
+
+
+                            &::before {
+                                background-position: right center;
+                                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYwIiBoZWlnaHQ9IjQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yNjAgNDhoLTYxLjQybDIxLjgtNDhIMjYwdjQ4ek0yMDkuNDggMGwtMjEuOCA0OGgtMjEuOGwyMS44LTQ4aDIxLjh6bS0zMi43IDBIMTguNDY1YTQgNCAwIDAwLTMuMzA2IDEuNzQ4bC0xMy42MjUgMjBhNC4wMDIgNC4wMDIgMCAwMDAgNC41MDRsMTMuNjI1IDIwQTQgNCAwIDAwMTguNDY1IDQ4SDE1NC45OGwyMS44LTQ4eiIgZmlsbD0iIzI1MzY3OCIvPjwvc3ZnPg==);
+                            }
+                        }
+                    }
+
+                    &__button,
+                    &__list {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-left: auto;
+                    }
+
+                    &:hover {
+                        & .card-fb {
+                            &__button {
+                                & .btn {
+                                    transform: translateX(0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}
+
+
+
+.card-fb {
+    background-color: var(--bg-01);
+    height: 100%;
+    padding: 24px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: card-fb-to-fade 0.5s ease forwards;
+
+    @media screen and (min-width: $w576) {
+        display: flex;
+    }
+
+    @media screen and (min-width: $w1440) {
+        padding: 56px 72px 80px 72px;
+    }
+
+
+
+    &__main {
+
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $w576) {
+            width: 50%;
+        }
+    }
+
+    &__image {
+
+        opacity: 1;
+        transition: 0.3s ease;
+
+        @media screen and (min-width: $w1200) {
+            opacity: 1;
+            transition: 0.3s ease;
+            position: absolute;
+            right: 0;
+            width: 62% !important;
+            top: 0;
+            bottom: 57px;
+        }
+
+        @media screen and (min-width: $w576) {
+            width: 50%;
+
+            & .bgimage {
+                padding: 0;
+                height: 100%;
+                background-position: right bottom;
+                background-size: contain;
+            }
+        }
+
+        & .bgimage {
+            padding-top: 45%;
+            @include bgimage-contain;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 137%;
+
+
+
+        @media screen and (min-width: $w1440) {
+            max-width: 285px;
+            font-size: 32px;
+            font-weight: bold;
+
+        }
+    }
+
+    &__list {
+
+        @media screen and (min-width: $w1440) {
+            padding-bottom: 24px;
+        }
+
+        & ul {
+
+            padding: 24px 0;
+
+
+
+            & li {
+
+                position: relative;
+                padding-left: 20px;
+                padding-bottom: 11px;
+                font-weight: 500;
+
+
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+
+                &::before {
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0.45em;
+                    border-radius: 50%;
+                    background-color: $main;
+                }
+            }
+        }
+    }
+
+    &__button {
+        margin-left: -24px;
+        padding-bottom: 12px;
+        margin-top: auto;
+
+        @media screen and (min-width: $w1440) {
+            margin-left: -72px;
+            margin-top: 0;
+        }
+
+        & .btn {
+            transform: translateX(-25px);
+
+            &:hover {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &:hover {
+        background-color: var(--main);
+
+        .card-fb {
+            &__button {
+                & .btn {
+                    &::before {
+                        filter: brightness(10) grayscale(1);
+                    }
+
+                    & span {
+                        color: var(--main);
+                    }
+                }
+            }
+
+            &__list {
+                color: #fff;
+
+                & li {
+                    &::before {
+                        background-color: #fff;
+                    }
+                }
+
+
+            }
+
+            &__title {
+                color: #fff;
+
+                & a {
+                    color: #fff;
+                }
+            }
+
+            &__image {
+                // opacity: 0;
+            }
+
+            &__button {
+                & .btn {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    &--special {
+
+        animation-delay: 0.1s;
+
+        & .card-fb {
+            animation-delay: 0s;
+
+            &__image {
+                & span {
+                    @media screen and (min-width: $w576) {
+                        background-position: 50% bottom;
+                        background-size: 143% auto;
+                    }
+                }
+            }
+        }
+    }
+
+    &--user {
+        animation-delay: 0.25s;
+
+        & .card-fb {
+
+
+            &__image {
+
+                @media screen and (min-width: $w1200) {
+                    bottom: 5px;
+                }
+
+                & span {
+                    @media screen and (min-width: $w576) {
+                        background-position: 50% bottom;
+                        background-size: 110% auto;
+                    }
+
+                    @media screen and (min-width: $w1200) {
+                        background-position: 82% bottom;
+                        background-size: 142% auto;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &--methods {
+        animation-delay: 0.4s;
+
+        & .card-fb {
+
+
+
+            &__image {
+                margin-bottom: -24px;
+
+                @media screen and (min-width: $w1200) {
+                    bottom: 20px;
+                }
+
+                & span {
+
+                    @media screen and (min-width: $w576) {
+                        background-size: 170% auto;
+                        background-position: 50% bottom;
+                    }
+
+                    @media screen and (min-width: $w1200) {
+                        background-size: 151% auto;
+                        background-position: 17% bottom;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &--video {
+        animation-delay: 0.55s;
+
+        & .card-fb {
+
+            &__image {
+                & span {
+                    @media screen and (min-width: $w576) {
+                        background-position: 50% bottom;
+                        background-size: 130% auto;
+                    }
+                }
+            }
+
+            &__list {
+                @media screen and (min-width: $w1440) {
+                    max-width: 280px;
+                }
+
+                @media screen and (min-width: $w1200) {
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+}
+
+
+.fb-device {
+
+    padding: 12px;
+    padding-bottom: 16px;
+    padding-bottom: 24px;
+    background: var(--main);
+    margin: 8px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+
+
+    @media screen and (min-width: $w992) {
+        position: absolute;
+        width: 440px;
+        height: 440px;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        border: 8px solid #fff;
+        padding: 30px;
+        opacity: 0;
+        z-index: 10;
+
+        animation: device-fb-to-fade 0.3s 0.7s ease forwards;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQwIiBoZWlnaHQ9IjQ0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBvcGFjaXR5PSIuMSIgZmlsbD0iI2ZmZiIgY2xpcC1wYXRoPSJ1cmwoI3ByZWZpeF9fcHJlZml4X19jbGlwMF81MTNfNTY0NCkiPjxwYXRoIGQ9Ik0tMTAzLjUyNSA0MDIuNzM3YTExLjQ0MSAxMS40NDEgMCAwMC0uMzE2IDIuNTIxaC0xMTUuNTc2bDQ0LjYtMTMzLjcxNWMuMjE2LS44My4zMy0xLjY4NC4zMzgtMi41NDNoMTE1LjU5N2wtNDQuNjQzIDEzMy43Mzd6bTEzNy4zOSAwYTExLjQ2IDExLjQ2IDAgMDAtLjMxNyAyLjUyMUgtODIuMDI3bDQ0LjcwNS0xMzMuNjk0Yy4yMTYtLjgzNy4zMy0xLjY5OC4zMzgtMi41NjRoMTE1LjQ3TDMzLjg2NSA0MDIuNzM3em0xMzcuNDExIDBjLS4yMTYuODIyLS4zMyAxLjY2OS0uMzM4IDIuNTIxSDU1LjM2Mmw0NC42LTEzMy43MTVjLjE5OS0uODMzLjMwNS0xLjY4Ni4zMTctMi41NDNoMTE1LjYxOGwtNDQuNjIxIDEzMy43Mzd6TS0xOTYuMjA5IDI2OWwtNDQuNzY5IDEzMy42NWExMC45NyAxMC45NyAwIDAwLS4yMTEgMi42MDhILTMxN1YyNjloMTIwLjc5MXptNDk1LjkwMSAxMzUuMjY2YTEwLjI5NiAxMC4yOTYgMCAwMS00LjI4OC45OTJIMTkyLjc1Mmw0NC42MjEtMTMzLjY5NGMuMjA5LS44MzcuMzE1LTEuNjk5LjMxNy0yLjU2NGg1Ny43MTRjMS40ODEuMDE3IDIuOTQyLjM1NSA0LjI4OC45OTJhMTAuNTkgMTAuNTkgMCAwMTMuNTI1IDIuNzAybDQ5LjgzNyA1Ny4xNTVhMTEuMDQ2IDExLjA0NiAwIDAxMi43MiA3LjI4YzAgMi42OS0uOTY5IDUuMjg0LTIuNzIgNy4yOGwtNDkuODM3IDU3LjE1NWExMC41OSAxMC41OSAwIDAxLTMuNTI1IDIuNzAyeiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9InByZWZpeF9fcHJlZml4X19jbGlwMF81MTNfNTY0NCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGg0NDB2NDQwSDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+);
+    }
+
+    &__wrp {
+        @media screen and (min-width: $w992) {
+            opacity: 0;
+            transform: scale(0.8);
+            animation: card-fb-to-fade 0.3s 0.75s ease forwards;
+        }
+    }
+
+
+    &__desc {
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: 500;
+        text-align: center;
+        padding-bottom: 16px;
+
+        @media screen and (min-width: $w992) {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        color: var(--white, #FFF);
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        padding-bottom: 16px;
+
+        & h1,
+        & span {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            display: inline-block;
+            border-bottom: 2px solid #ffffff49;
+            padding-bottom: 5px
+        }
+
+    }
+
+    &__image {
+        & picture {
+            @include picture(100%, contain);
+        }
+
+        max-width: 160px;
+        margin: 0 auto;
+        transition: 0.3s ease;
+    }
+
+    &:hover {
+        & .fb-device {
+            &__image {
+                max-width: 170px;
+            }
+        }
+    }
+}

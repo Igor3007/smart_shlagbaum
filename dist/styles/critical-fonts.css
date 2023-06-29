@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'GolosText';
-  src: url("/fonts/Golos-Text/Golos-Text_Regular.woff2") format("woff2"), url("/fonts/Golos-Text/Golos-Text_Regular.woff") format("woff");
+  src: url("/fonts/golos/golos-text_regular.woff2") format("woff2"), url("/fonts/golos/golos-text_regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'GolosText';
-  src: url("/fonts/Golos-Text/Golos-Text_Medium.woff2") format("woff2"), url("/fonts/Golos-Text/Golos-Text_Medium.woff") format("woff");
+  src: url("/fonts/golos/golos-text_medium.woff2") format("woff2"), url("/fonts/golos/golos-text_medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: 'GolosText';
-  src: url("/fonts/Golos-Text/Golos-Text_DemiBold.woff2") format("woff2"), url("/fonts/Golos-Text/Golos-Text_DemiBold.woff") format("woff");
+  src: url("/fonts/golos/golos-text_demibold.woff2") format("woff2"), url("/fonts/golos/golos-text_demibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
@@ -37,7 +37,7 @@
 
 @font-face {
   font-family: 'GolosText';
-  src: url("/fonts/Golos-Text/Golos-Text_Bold.woff2") format("woff2"), url("/fonts/Golos-Text/Golos-Text_Bold.woff") format("woff");
+  src: url("/fonts/golos/golos-text_bold.woff2") format("woff2"), url("/fonts/golos/golos-text_bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -48,8 +48,9 @@
 
 @font-face {
   font-family: 'GolosText';
-  src: url("/fonts/Golos-Text/Golos-Text_Black.woff2") format("woff2"), url("/fonts/Golos-Text/Golos-Text_Black.woff") format("woff");
+  src: url("/fonts/golos/golos-text_black.woff2") format("woff2"), url("/fonts/golos/golos-text_black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
+
 /*# sourceMappingURL=maps/critical-fonts.css.map */

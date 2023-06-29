@@ -19,6 +19,28 @@ html {
 
 }
 
+html,
+body {
+    scrollbar-color: var(--main) #fff;
+    scrollbar-width: thin !important;
+
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+        border-radius: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--main);
+        border-radius: 0;
+    }
+}
+
 html * {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -551,12 +573,15 @@ input[type="date"] {
 }
 
 @mixin font-h2 {
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 121%;
+    color: var(--text-01, #222429);
+    /* H2 */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 133%;
+    font-size: 24px;
 
     @media screen and (min-width: $w760) {
-        font-size: 28px;
+        font-size: 36px;
     }
 
 
@@ -581,15 +606,10 @@ input[type="date"] {
 
 @mixin font-h4 {
 
-
     /* H4 */
     font-size: 24px;
     font-weight: 700;
-    line-height: 36px;
-
-    @media screen and (min-width: $w576) {
-        font-size: 20px;
-    }
+    line-height: 133%;
 
 
 }
@@ -650,9 +670,4 @@ table {
 .lazyloaded {
     opacity: 1;
     transition: opacity 0.5s ease;
-}
-
-.body-store-home {
-    background-color: $violet-1-1;
-    touch-action: pan-x;
 }

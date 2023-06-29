@@ -1,0 +1,52 @@
+mixin card-solution(data)
+    .card-solution
+        .card-solution__title= data.title
+        .card-solution__link
+            a(href=data.link)= data.title
+        .card-solution__image
+            +picturePng(data.img)
+
+mixin complex-solutions
+
+    -
+        const complexs = [
+            {
+                title: 'Дворы многоквартирных домов', 
+                img: '/img/common/solution',
+                link: '/complex.html' 
+            },
+            {
+                title: 'Многоуровневые и плоскостные паркинги', 
+                img: '/img/common/solution-4',
+                link: '/complex.html' 
+            },
+            {
+                title: 'Дачные и коттеджные поселки', 
+                img: '/img/common/solution-5',
+                link: '/complex.html' 
+            },
+            {
+                title: 'Торговые центры, магазины и рестораны', 
+                img: '/img/common/solution-6',
+                link: '/complex.html' 
+            },
+            {
+                title: 'Гостиницы и дома отдыха', 
+                img: '/img/common/solution-1',
+                link: '/complex.html' 
+            },
+            {
+                title: 'Промышленные, складские и логистческие центры', 
+                img: '/img/common/solution-2',
+                link: '/complex.html' 
+            },
+        ]
+
+    section.section-complex-solutions
+        .container
+            .complex-solutions
+                .complex-solutions__title  Комлексные решения
+                .complex-solutions__list
+                    each item in complexs
+                        .complex-solutions__item
+                            +card-solution(item)

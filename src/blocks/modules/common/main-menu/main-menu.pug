@@ -4,7 +4,7 @@ mixin item-contact(data)
     .item-contact__main
       .item-contact__label= data.label
       .item-contact__link: a(href=data.link)= data.text
-
+ 
 mixin main-menu(data)
   .main-menu(data-menu="container")
     .main-menu__wrp
@@ -32,21 +32,25 @@ mixin main-menu(data)
                             each multi in item.multi
                               li: a(href="#")= multi
       .main-menu__contact
-        +item-contact({
-          icon: '/img/svg/ic_phone.svg', 
-          label: 'Phone:', 
-          link: 'tel:6474280007', 
-          text: '(647) 428-0007'
-        })
-        +item-contact({
-          icon: '/img/svg/ic_mail.svg', 
-          label: 'Email:', 
-          link: 'mailto:info@csgrenovation.ca', 
-          text: 'info@csgrenovation.ca'
-        }) 
-      .main-menu__social
-        ul.social-link
-          li.social-link__inst: a(href='#'): +bgimage('/img/svg/ic_ig.svg')
-          li.social-link__fb: a(href='#'): +bgimage('/img/svg/ic_fb.svg')
-          li.social-link__google: a(href='#'): +bgimage('/img/svg/ic_google.svg')
+ 
+        a(href='#')
+          button.btn.btn-white Обратная связь
+
+        //- +item-contact({
+        //-   icon: '/img/svg/ic_phone.svg', 
+        //-   label: 'Phone:', 
+        //-   link: 'tel:6474280007', 
+        //-   text: '(647) 428-0007'
+        //- })
+        //- +item-contact({
+        //-   icon: '/img/svg/ic_mail.svg', 
+        //-   label: 'Email:', 
+        //-   link: 'mailto:info@csgrenovation.ca', 
+        //-   text: 'info@csgrenovation.ca'
+        //- }) 
+      //- .main-menu__social
+      //-   ul.social-link
+      //-     li.social-link__inst: a(href='#'): +bgimage('/img/svg/ic_ig.svg')
+      //-     li.social-link__fb: a(href='#'): +bgimage('/img/svg/ic_fb.svg')
+      //-     li.social-link__google: a(href='#'): +bgimage('/img/svg/ic_google.svg')
        
