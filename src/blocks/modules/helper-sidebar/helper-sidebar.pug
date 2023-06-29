@@ -1,0 +1,71 @@
+mixin helper-sidebar()
+    .helper-sidebar__wrapper
+        .formated-text
+            h4
+                strong Откройте тестовый шлагбаум со своего телефона
+        .helper-sidebar__img-wrapper
+            +picture('/img/common/helper-camera')
+        .formated-text
+            h5
+                strong 1. Внесите номер своего телефона:
+        .helper-sidebar__form-wrapper
+            form(action='#', method='#')
+                .helper-sidebar__form-field
+                    label(for='#phone-number') Номер телефона
+                    input(id='phone-number', placeholder='+7(ХХХ)ХХХ-ХХ-ХХ')
+                button(type='submit') ок
+        p Список телефонов управляющих шлагбаумом:
+        .helper-sidebar__table-wrapper
+            table
+                tbody
+                    tr
+                        td № по порядку
+                        td Добавленные номера
+                    tr
+                        td 101
+                        td +7(977)951-**-75
+                    tr
+                        td 100
+                        td +7(910)476-**-27
+                    tr
+                        td 99
+                        td +7(963)750-**-40
+                    tr
+                        td ...
+                        td ...
+        .formated-text
+            h5
+                strong 2. Для открытия тестового шлагбаума, позвоните со своего телефона на номер
+        .helper-sidebar__number-wrapper
+            a(href='tel:74951079122') +7(495)107-91-22
+        p Принятые звонки на открытие шлагбаума:
+        .helper-sidebar__table-wrapper
+            table
+                tbody
+                    tr
+                        td Время
+                        td Номер
+                        td Статус
+                    tr
+                        td 27.04, 21:01
+                        td +7(977)951-**-75
+                        td
+                            span.clr-green Доступ предоставлен
+                    tr
+                        td 25.04, 05:35
+                        td +7(910)476-**-27
+                        td
+                            span.clr-red Превышен лимит
+                    tr
+                        td 05.04, 17:41
+                        td +7(963)750-**-40
+                        td
+                            span.clr-red Номера нет в базе данных
+                    tr
+                        td ...
+                        td ...
+                        td
+
+
+
+

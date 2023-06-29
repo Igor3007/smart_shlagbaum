@@ -24,7 +24,6 @@
         "lint:scripts": "eslint --color ./src/blocks",
         "lint:scripts --fix": "eslint --fix --color ./src/blocks"
     },
-
     "devDependencies": {
         "@babel/core": "^7.4.3",
         "@babel/preset-env": "^7.4.3",
@@ -65,12 +64,10 @@
         "postcss-sort-media-queries": "^4.1.0",
         "require-dir": "^1.2.0",
         "smart-grid": "^2.1.2",
-
         "webpack": "~4.35.0",
         "webpack-stream": "^5.2.1",
         "yargs": "~13.2.4"
     },
-
     "dependencies": {
         "gulp-uglify": "^3.0.2",
         "lazysizes": "^5.3.2"

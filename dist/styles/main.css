@@ -171,7 +171,7 @@ input[type="date"] {
 .formated-text h6 {
   margin-bottom: 25px;
   line-height: 120%;
-  color: var(--blue-dark, #253678);
+  color: #222429;
   font-weight: 700;
 }
 
@@ -295,7 +295,7 @@ input[type="date"] {
 }
 
 .formated-text strong {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 /* =========================================== */
@@ -3822,6 +3822,148 @@ footer {
   font-size: 36px;
 }
 
+.helper-sidebar {
+  max-width: 460px;
+  width: 100%;
+}
+
+.helper-sidebar__wrapper {
+  padding: 20px 24px;
+  background: #ECF0F5;
+  border-radius: 8px;
+}
+
+.helper-sidebar__img-wrapper {
+  border-radius: 6px;
+  border: 6px solid var(--blue-dark, #253678);
+  margin-bottom: 24px;
+}
+
+.helper-sidebar__img-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.helper-sidebar__form-wrapper {
+  margin-bottom: 24px;
+}
+
+.helper-sidebar__form-wrapper form {
+  display: flex;
+  align-items: center;
+}
+
+.helper-sidebar__form-wrapper button {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #253678;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  padding: 12px 24px;
+  margin-left: 12px;
+}
+
+.helper-sidebar__form-wrapper button:hover {
+  background-color: var(--blue-light, #A8AFC9);
+}
+
+.helper-sidebar__form-field {
+  position: relative;
+}
+
+.helper-sidebar__form-field label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #787D8F;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #ECF0F5;
+}
+
+.helper-sidebar__form-field input {
+  font-family: 'GolosText';
+  font-weight: 400;
+  font-size: 16px;
+  color: #A9ACB8;
+  background: none;
+  outline: none;
+  border: 1px solid #CDD5F5;
+  border-radius: 6px;
+  height: 48px;
+}
+
+.helper-sidebar__form-field input::placeholder {
+  color: #A9ACB8;
+}
+
+.helper-sidebar__table-wrapper:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.helper-sidebar__table-wrapper table {
+  background: #FFFFFF;
+  min-width: initial;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.helper-sidebar__table-wrapper table tr {
+  position: relative;
+}
+
+.helper-sidebar__table-wrapper table tr:not(:first-child) td {
+  font-weight: 600;
+}
+
+.helper-sidebar__table-wrapper table tr:not(:last-child):after {
+  content: '';
+  width: 90%;
+  height: 1px;
+  border-bottom: 1px solid #E2E6EB;
+  position: absolute;
+  left: 16px;
+  bottom: 0;
+}
+
+.helper-sidebar__table-wrapper table td {
+  border: none;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.helper-sidebar__table-wrapper table td .clr-green {
+  color: #7EAE4E;
+}
+
+.helper-sidebar__table-wrapper table td .clr-red {
+  color: #F94258;
+}
+
+.helper-sidebar__table-wrapper table td:first-child {
+  font-weight: initial;
+}
+
+.helper-sidebar__number-wrapper a {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 20px;
+  color: #253678;
+  border-bottom: 3px solid #25367830;
+  padding-bottom: 4px;
+}
+
+.helper-sidebar__number-wrapper a:hover {
+  color: var(--blue-light, #A8AFC9);
+}
+
 /* common styles */
 
 .page-hidden {
@@ -4373,6 +4515,19 @@ a[data-tooltip]:hover::before {
     max-width: 90%;
   }
 
+  .helper-sidebar__table-wrapper table td {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .helper-sidebar__table-wrapper table td:first-child {
+    white-space: nowrap;
+  }
+
+  .helper-sidebar__table-wrapper table td:nth-of-type(2) {
+    white-space: nowrap;
+  }
+
   .create-review {
     padding: 25px;
   }
@@ -4696,15 +4851,18 @@ a[data-tooltip]:hover::before {
   }
 
   .formated-text h3 {
-    font-size: 20px;
+    font-size: 32px;
+    color: #222429;
   }
 
   .formated-text h4 {
-    font-size: 18px;
+    font-size: 24px;
+    color: #222429;
   }
 
   .formated-text h5 {
     font-size: 16px;
+    color: #222429;
   }
 
   .formated-text h6 {
@@ -4726,6 +4884,10 @@ a[data-tooltip]:hover::before {
 
   .page-details__wrp {
     display: flex;
+  }
+
+  .helper-sidebar {
+    padding-left: 40px;
   }
 
   .hide--desctop {
