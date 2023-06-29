@@ -1,9 +1,20 @@
+@keyframes slide-X {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
 .main-menu {
     position: fixed;
     z-index: 110;
-    background: #fff;
-    top: 64px;
-    left: 0;
+    background: var(--main);
+    top: 74px;
+    left: auto;
     right: 0;
     bottom: 0;
     color: #242424;
@@ -12,30 +23,37 @@
     overflow-x: hidden;
     padding: rem(80) rem(25);
     animation: slide-X 0.3s ease forwards;
-
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 576px;
 
 
     @media screen and (max-width: $w992) {
         padding: 12px 25px 0 25px;
     }
 
-    &::before {
-        content: '';
-        position: fixed;
-        right: 0;
-        top: inherit;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 10%;
-        z-index: -1;
-
-        @media screen and (min-width: 445px) {
-            width: calc(100% - 400px);
-        }
-
+    @media screen and (min-width: $w992) {
+        top: 90px;
     }
+
+    @media screen and (min-width: $w576) {
+        max-width: 400px;
+    }
+
+    // &::before {
+    //     content: '';
+    //     position: fixed;
+    //     right: 0;
+    //     top: inherit;
+    //     bottom: 0;
+    //     background-color: rgba(0, 0, 0, 0.5);
+    //     width: 10%;
+    //     z-index: -1;
+
+    //     @media screen and (min-width: 445px) {
+    //         width: calc(100% - 400px);
+    //     }
+
+    // }
 
     &__wrp {
 
@@ -44,7 +62,6 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        background: #fff;
         width: 100%;
 
     }
@@ -63,6 +80,7 @@
             display: flex;
             align-items: center;
             flex-direction: column;
+
 
             & img {
                 height: rem(40);
@@ -104,7 +122,7 @@
                     &:hover {
 
                         &>a {
-                            color: $accent-2-3;
+                            color: $accent-1-2;
 
                         }
                     }
@@ -115,6 +133,7 @@
 
                             display: flex;
                             align-items: center;
+
 
 
                             &::after {
@@ -200,7 +219,7 @@
                             }
 
                             & a {
-                                font-size: 16px;
+                                font-size: 18px;
                                 font-weight: 600;
                                 padding: 7px 24px;
                                 height: auto;
@@ -226,7 +245,7 @@
                             padding-left: 15px;
 
                             & a {
-                                font-size: 16px;
+                                font-size: 18px;
                                 font-weight: 600;
 
                                 @media screen and (min-width: $w1440) {
@@ -242,9 +261,13 @@
                         display: flex;
                         height: 36px;
                         align-items: center;
-
+                        color: #fff;
                         max-width: calc(100% - 36px);
                         position: relative;
+                        text-align: center;
+                        justify-content: center;
+                        font-size: 18px;
+                        font-weight: 500;
 
                         &::after {
                             position: absolute !important;
@@ -277,13 +300,19 @@
 
     &__contact {
 
-        padding-top: 25px;
+        padding: 20px 0;
+
+        & .btn {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 280px;
+        }
 
         &::before {
             content: '';
 
             height: 1px;
-            background-color: #D9D9D9;
+            background-color: rgba(255, 255, 255, 0.226);
             display: block;
             margin-left: -24px;
             margin-right: -24px;

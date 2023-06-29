@@ -203,12 +203,10 @@
              this.state = 'close';
 
              this.open = function () {
-
-
-
                  this.el ? this.el.classList.add('open') : ''
                  this.button.classList.add('open')
                  document.body.classList.add('hidden')
+                 document.body.classList.add('open-mobile-menu')
                  this.state = 'open';
 
              }
@@ -218,14 +216,13 @@
                  this.el ? this.el.classList.add('close-animate') : false
                  this.button.classList.remove('open')
 
-
                  setTimeout(() => {
                      this.el ? this.el.classList.remove('open') : false
                      this.el ? this.el.classList.remove('close-animate') : false
                      document.body.classList.remove('hidden')
+                     document.body.classList.remove('open-mobile-menu')
                      this.state = 'close'
                  }, 200)
-
 
              }
 
@@ -312,32 +309,51 @@
 
      }
 
+     /* ====================================================
+     map footer
+     ====================================================*/
 
-     //  window.loadApiYmaps(() => {
+     function initMapFooter() {
+         window.loadApiYmaps((ymaps) => {
 
-     //      ymaps.ready(function () {
-     //          const myMap = new ymaps.Map('map', {
-     //              center: [55.751574, 37.573856],
-     //              zoom: 9
-     //          }, {
-     //              searchControlProvider: 'yandex#search'
-     //          });
+             if (document.querySelector('#footer-minimap')) {
 
-     //          const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-     //              hintContent: 'Мой умный шлагбаум',
-     //          }, {
-     //              iconLayout: 'default#image',
-     //              iconImageHref: '/img/svg/ic_pin.svg',
-     //              iconImageSize: [30, 42],
-     //              iconImageOffset: [-5, -38]
-     //          });
+                 const coordinates = document.querySelector('#footer-minimap').dataset.coordinates.split(',')
+
+                 ymaps.ready(function () {
+                     const myMap = new ymaps.Map('footer-minimap', {
+                         center: coordinates,
+                         zoom: 14,
+                         controls: []
+                     }, {
+                         searchControlProvider: 'yandex#search',
+                         suppressMapOpenBlock: true
+                     });
+                     const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                         hintContent: 'Мой умный шлагбаум',
+                     }, {
+                         iconLayout: 'default#image',
+                         iconImageHref: '/img/svg/ic_pin.svg',
+                         iconImageSize: [60, 68],
+                         iconImageOffset: [-30, -68]
+                     });
+                     myMap.geoObjects.add(myPlacemark)
+                 })
 
 
-     //          myMap.geoObjects.add(myPlacemark)
+             }
+         })
+     }
 
+     window.addEventListener('scroll', e => {
 
-     //      })
-     //  })
+         let posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
+         if (posTop > 200 && window.mapFooterInit == undefined) {
+             initMapFooter();
+             window.mapFooterInit = true
+         }
+     })
 
 
  });

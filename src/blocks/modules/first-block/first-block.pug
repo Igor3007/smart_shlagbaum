@@ -60,8 +60,9 @@ mixin first-block
     .section-first-block
         .first-block
             .first-block__device
+                .fb-device-overlay
                 .fb-device
-                    .fb-device__wrp
+                    .fb-device__wrp(onclick="window.location.href='/device.html'")
                         .fb-device__desc Надёжное конечное устройство управления, адаптированное к программному обеспечению
                         .fb-device__title: span МОЙ УМНЫЙ ШЛАГБАУМ
                         .fb-device__image
