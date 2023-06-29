@@ -1,6 +1,7 @@
 extends layouts/home
 
 include ../blocks/modules/first-block/first-block.pug
+include ../blocks/modules/complex-solutions/complex-solutions.pug
  
 block variables
   include ../data/data.pug
@@ -9,6 +10,7 @@ block variables
 
 block content 
       +first-block()
+      +complex-solutions()
  
 block scripts
   script(src="/js/vendor.js") 

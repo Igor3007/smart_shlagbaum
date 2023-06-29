@@ -4,6 +4,7 @@ mixin first-block
         const fb = [
             {
                 title: 'Распознавание спецтранспорта',
+                link: '/spectransport.html',
                 list: [
                     'Скорая помощь',
                     'Полиция',
@@ -12,20 +13,24 @@ mixin first-block
                     'Коммунальная техника',
                     'Почта России',
                 ],
-                img: '/img/common/bg-img-1-mobile.jpg'
+                img: '/img/common/bg-img-1-mobile-removebg-preview.png',
+                modify: '--special'
             },
             {
                 title: 'Распознавание гражданских ТС:',
+                link: '/spectransport.html',
                 list: [
                     'Госномер',
                     'Марка',
                     'Модель',
                     'Цвет транспорта',
                 ],
-                img: '/img/common/bg-img-2-mobile.jpg'
+                img: '/img/common/bg-img-2-mobile-removebg-preview.png',
+                modify: '--user'
             },
             {
                 title: 'Вспомогательные методы открытия',
+                link: '/spectransport.html',
                 list: [
                     'Телефонный вызов',
                     'Мобильное приложение',
@@ -34,10 +39,12 @@ mixin first-block
                     'Именные пульты',
                     'Система удалённой диспетчеризации КПП',
                 ],
-                img: '/img/common/bg-img-3-mobile.jpg'
+                img: '/img/common/bg-img-3-mobile-removebg-preview.png',
+                modify: '--methods'
             },
             {
                 title: 'Видеонаблюдение и видеоаналитика',
+                link: '/spectransport.html',
                 list: [
                     'Облачная видеотрансляция',
                     'Облачный видеоархив',
@@ -45,21 +52,33 @@ mixin first-block
                     'Привязка видеофрагментов к событиям',
                     
                 ],
-                img: '/img/common/bg-img-4-mobile.jpg'
+                img: '/img/common/bg-img-4-mobile-removebg-preview.png',
+                modify: '--video'
             }
         ]
 
     .section-first-block
         .first-block
+            .first-block__device
+                .fb-device
+                    .fb-device__wrp
+                        .fb-device__desc Надёжное конечное устройство управления, адаптированное к программному обеспечению
+                        .fb-device__title: span МОЙ УМНЫЙ ШЛАГБАУМ
+                        .fb-device__image
+                            a(href='/device.html')
+                                +picturePng('/img/common/img-device')
+
             .first-block__items
-                each item in fb
+                each item in fb 
                     .first-block__item
                         +card-fb(item)
 
+            
+
 mixin card-fb(data)
-    .card-fb
+    .card-fb(class="card-fb"+data.modify onclick="window.location.href='"+data.link+"'" )
         .card-fb__main
-            .card-fb__title= data.title
+            .card-fb__title: a(href=data.link)= data.title
             .card-fb__list
                 ul
                     each li in data.list 
