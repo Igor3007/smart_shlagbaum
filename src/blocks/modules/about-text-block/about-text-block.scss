@@ -1,0 +1,31 @@
+.about-text-block {
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    h2 {
+      font-size: 36px;
+      width: 30%;
+      margin-right: 48px;
+    }
+  }
+
+  &__wrapper-text {
+    width: 70%;
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+      span{
+        display: block;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        color: #222429;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

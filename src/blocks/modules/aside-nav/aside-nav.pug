@@ -64,9 +64,25 @@ mixin aside-info(data)
             span Особенности системы
         .aside-info__desc= data.text
 
+
+
 mixin aside-banner()
     .aside-banner
         .aside-banner__image
             a(href='#') 
                 picture
                     img(src="/img/detail/banner-sidebar.jpg")
+
+mixin aside-info-banner()
+    .aside-banner
+        .aside-banner__image
+            a(href='#')
+                picture
+                    img(src="/img/detail/aside-info-banner.jpg")
+
+mixin sidebar-banner-new()
+    .aside-banner
+        .aside-banner__image
+            a(href='#')
+                picture
+                    img(src="/img/detail/banner-sidebar-new.jpg")

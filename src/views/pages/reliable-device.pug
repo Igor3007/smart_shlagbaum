@@ -5,6 +5,8 @@ include ../../blocks/components/video/video.pug
 include ../../blocks/modules/aside-nav/aside-nav.pug
 include ../../blocks/modules/banner-top/banner-top.pug
 include ../../blocks/modules/helper-sidebar/helper-sidebar.pug
+include ../../blocks/modules/logo-banner/logo-banner.pug
+
 
 
 block variables
@@ -15,9 +17,9 @@ block variables
 block content
 
 
-    +banner-top({
+    +banner-top-new-bg({
         title: 'Надёжное конечное устройство',
-        image: '/img/detail/shopping-malls'
+        image: '/img/detail/reliable-device'
     })
 
     section.section-page-details
@@ -29,22 +31,24 @@ block content
                         text: 'Не требует сложных настроек, работает «из коробки»!'
                     })
                     +aside-nav('Надёжное конечное устройство')
-                    +aside-banner()
+                    +sidebar-banner-new()
 
                 .page-details__content
-                    .page-details__breabcrumbs
-                        +breadcrumb([
-                            'Главная',
-                            'Особенности системы',
-                            'Надёжное конечное устройство',
-                        ])
+                    .page-details__page-container
+                        .page-details__breabcrumbs
+                            +breadcrumb([
+                                'Главная',
+                                'Особенности системы',
+                                'Надёжное конечное устройство',
+                            ])
 
                     .page-details__wrp
-                        .page-details__article
-                            .formated-text
-                                p Множество достойных программных продуктов не получают широкого распространения только потому, что не имеют собственного конечного устройства, а должны интегрироваться сложными настройками и коммутацией сетевых соединений.
-                                p Именно поэтому, прежде чем выпустить на рынок наше программное обеспечение, мы приложили массу усилий для создания собственного «железа», которое не нуждается в «плясках с бубнами» при установке, а является работоспособным по умолчанию. Для монтажа не потребуется привлекать высокооплачиваемых IT-специалистов, устройство готово к монтажу и эксплуатации из коробки.
-                                +picture("/img/common/reliable-device-pc")
+                        .page-details__page-container
+                            .page-details__article
+                                .formated-text
+                                    p Множество достойных программных продуктов не получают широкого распространения только потому, что не имеют собственного конечного устройства, а должны интегрироваться сложными настройками и коммутацией сетевых соединений.
+                                    p Именно поэтому, прежде чем выпустить на рынок наше программное обеспечение, мы приложили массу усилий для создания собственного «железа», которое не нуждается в «плясках с бубнами» при установке, а является работоспособным по умолчанию. Для монтажа не потребуется привлекать высокооплачиваемых IT-специалистов, устройство готово к монтажу и эксплуатации из коробки.
+                    +logo-banner()
 
 
 

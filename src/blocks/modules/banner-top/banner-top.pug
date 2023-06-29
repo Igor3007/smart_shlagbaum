@@ -5,3 +5,21 @@ mixin banner-top(data)
                 h1= data.title
             .banner-top__image
                 +picture(data.image)
+
+
+
+mixin banner-top-new-bg(data)
+    section.section-banner-top.section-banner-top--bg
+        .banner-top
+            .banner-top__title
+                h1= data.title
+            .banner-top__image
+                +picture(data.image)
+
+
+mixin banner-top-with-img(data)
+    section.section-banner-top.section-banner-top--with-img(style='background-image: url('+data.image+')')
+        .banner-top
+            .banner-top__title
+                h1= data.title
+            .banner-top__image

@@ -1,0 +1,42 @@
+.logo-banner{
+  &__wrapper-md{
+    background-color: #ECF0F5;
+    margin: 0 -16px;
+    @media screen and (min-width: 576px) {
+      background-color: initial;
+      margin: 0;
+
+    }
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+  ul{
+    padding: 16px;
+    li{
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+      h5{
+        font-weight: 700;
+        font-size: 20px;
+        color: #253678;
+      }
+    }
+    li:before{
+      content: '';
+      display: block;
+      width: 58px;
+      min-width: 58px;
+      height: 58px;
+      margin-right: 16px;
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBvcGFjaXR5PSIwLjIiIGN4PSIyNy45OTk4IiBjeT0iMjgiIHI9IjIwLjExNSIgc3Ryb2tlPSIjMjUzNjc4Ii8+CjxjaXJjbGUgb3BhY2l0eT0iMC4yIiBjeD0iMjcuOTk5NCIgY3k9IjI4LjAwMDEiIHI9IjI2Ljc2NSIgc3Ryb2tlPSIjMjUzNjc4Ii8+CjxjaXJjbGUgY3g9IjI3Ljk5OTUiIGN5PSIyNy45OTk5IiByPSI2LjMxIiBmaWxsPSIjRkRGNjM3IiBzdHJva2U9IiMyNTM2NzgiIHN0cm9rZS13aWR0aD0iNiIvPgo8L3N2Zz4K') no-repeat;
+    }
+  }
+  &__wrapper-pc{
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  }
+}

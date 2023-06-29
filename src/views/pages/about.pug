@@ -1,0 +1,53 @@
+extends ../layouts/page-details
+
+include ../../blocks/components/breadcrumb/breadcrumb.pug
+include ../../blocks/components/video/video.pug
+include ../../blocks/modules/aside-nav/aside-nav.pug
+include ../../blocks/modules/banner-top/banner-top.pug
+include ../../blocks/modules/helper-sidebar/helper-sidebar.pug
+include ../../blocks/modules/about-text-block/about-text-block.pug
+include ../../blocks/modules/about-cards/about-cards.pug
+
+
+block variables
+    include ../../data/data.pug
+    - const title = "МОЙ УМНЫЙ ШЛАГБАУМ"
+
+
+block content
+
+
+    +banner-top-with-img({
+        title: 'О нас',
+        image: '/img/detail/about-top-banner.jpg'
+    })
+
+    section.section-page-details
+        .container
+            .page-details
+                .page-details__aside
+                    +aside-info({
+                        text: 'ООО «МОИ УМНЫЕ СЕРВИСЫ» – опытная команда разработчиков с обширной практикой внедрения и эксплуатации систем видеонаблюдения, видеоаналитики и СКУД'
+                    })
+
+                    +aside-info-banner()
+
+                .page-details__content
+                    .page-details__page-container
+                        .page-details__breabcrumbs
+                            +breadcrumb([
+                                'Главная',
+                                'О нас',
+                            ])
+
+                        .page-details__wrp
+                            .page-details__article
+                                +about-text-block()
+                                +about-cards()
+
+
+
+block scripts
+    script(src="/js/vendor.js")
+    script(src="/js/common.js")
+
