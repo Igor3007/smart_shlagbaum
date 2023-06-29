@@ -4,7 +4,7 @@ mixin item-contact(data)
     .item-contact__main
       .item-contact__label= data.label
       .item-contact__link: a(href=data.link)= data.text
-
+ 
 mixin main-menu(data)
   .main-menu(data-menu="container")
     .main-menu__wrp
@@ -32,7 +32,7 @@ mixin main-menu(data)
                             each multi in item.multi
                               li: a(href="#")= multi
       .main-menu__contact
-
+ 
         a(href='#')
           button.btn.btn-white Обратная связь
 
