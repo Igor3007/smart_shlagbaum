@@ -55,6 +55,7 @@ footer {
 
     &__item {
 
+
         @media screen and (min-width: $w992) {
             padding-left: 40px;
         }
@@ -110,6 +111,7 @@ footer {
             border: 4px solid #393C47;
             border-radius: 8px;
             position: relative;
+            overflow: hidden;
 
             &>#footer-minimap {
                 position: absolute;
@@ -124,6 +126,7 @@ footer {
     &__item {
         padding-bottom: 10px;
         line-height: 140%;
+        display: flex;
 
         & span {
             opacity: 0.6;
@@ -173,6 +176,11 @@ footer {
     & img {
         max-width: 208px;
         margin: 0 auto;
+        transition: 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05) translateX(10px);
+        }
 
         @media screen and (min-width: $w992) {
             max-width: 160px;

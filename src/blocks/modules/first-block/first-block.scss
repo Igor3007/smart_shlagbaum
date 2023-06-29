@@ -68,7 +68,7 @@
                     flex-direction: row-reverse;
 
                     &__title {
-                        text-align: right;
+                        text-align: left;
                         margin-left: auto;
                     }
 
@@ -95,7 +95,7 @@
 
                             &::before {
                                 background-position: right center;
-                                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYwIiBoZWlnaHQ9IjQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yNjAgNDhoLTYxLjQybDIxLjgtNDhIMjYwdjQ4ek0yMDkuNDggMGwtMjEuOCA0OGgtMjEuOGwyMS44LTQ4aDIxLjh6bS0zMi43IDBIMTguNDY1YTQgNCAwIDAwLTMuMzA2IDEuNzQ4bC0xMy42MjUgMjBhNC4wMDIgNC4wMDIgMCAwMDAgNC41MDRsMTMuNjI1IDIwQTQgNCAwIDAwMTguNDY1IDQ4SDE1NC45OGwyMS44LTQ4eiIgZmlsbD0iIzI1MzY3OCIvPjwvc3ZnPg==);
+                                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYwIiBoZWlnaHQ9IjQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yNjAgNDhoLTQwLjQybC0xOC4yLTQ4SDI2MHY0OHpNMTkwLjQ4IDBsMTguMiA0OGgtMjEuOGwtMTguMi00OGgyMS44em0tMzIuNyAwSDE4LjQ2NWE0IDQgMCAwMC0zLjMwNiAxLjc0OGwtMTMuNjI1IDIwYTQgNCAwIDAwMCA0LjUwNGwxMy42MjUgMjBBNCA0IDAgMDAxOC40NjUgNDhIMTc1Ljk4bC0xOC4yLTQ4eiIgZmlsbD0iIzI1MzY3OCIvPjwvc3ZnPg==);
                             }
                         }
                     }
@@ -455,6 +455,13 @@
         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQwIiBoZWlnaHQ9IjQ0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBvcGFjaXR5PSIuMSIgZmlsbD0iI2ZmZiIgY2xpcC1wYXRoPSJ1cmwoI3ByZWZpeF9fcHJlZml4X19jbGlwMF81MTNfNTY0NCkiPjxwYXRoIGQ9Ik0tMTAzLjUyNSA0MDIuNzM3YTExLjQ0MSAxMS40NDEgMCAwMC0uMzE2IDIuNTIxaC0xMTUuNTc2bDQ0LjYtMTMzLjcxNWMuMjE2LS44My4zMy0xLjY4NC4zMzgtMi41NDNoMTE1LjU5N2wtNDQuNjQzIDEzMy43Mzd6bTEzNy4zOSAwYTExLjQ2IDExLjQ2IDAgMDAtLjMxNyAyLjUyMUgtODIuMDI3bDQ0LjcwNS0xMzMuNjk0Yy4yMTYtLjgzNy4zMy0xLjY5OC4zMzgtMi41NjRoMTE1LjQ3TDMzLjg2NSA0MDIuNzM3em0xMzcuNDExIDBjLS4yMTYuODIyLS4zMyAxLjY2OS0uMzM4IDIuNTIxSDU1LjM2Mmw0NC42LTEzMy43MTVjLjE5OS0uODMzLjMwNS0xLjY4Ni4zMTctMi41NDNoMTE1LjYxOGwtNDQuNjIxIDEzMy43Mzd6TS0xOTYuMjA5IDI2OWwtNDQuNzY5IDEzMy42NWExMC45NyAxMC45NyAwIDAwLS4yMTEgMi42MDhILTMxN1YyNjloMTIwLjc5MXptNDk1LjkwMSAxMzUuMjY2YTEwLjI5NiAxMC4yOTYgMCAwMS00LjI4OC45OTJIMTkyLjc1Mmw0NC42MjEtMTMzLjY5NGMuMjA5LS44MzcuMzE1LTEuNjk5LjMxNy0yLjU2NGg1Ny43MTRjMS40ODEuMDE3IDIuOTQyLjM1NSA0LjI4OC45OTJhMTAuNTkgMTAuNTkgMCAwMTMuNTI1IDIuNzAybDQ5LjgzNyA1Ny4xNTVhMTEuMDQ2IDExLjA0NiAwIDAxMi43MiA3LjI4YzAgMi42OS0uOTY5IDUuMjg0LTIuNzIgNy4yOGwtNDkuODM3IDU3LjE1NWExMC41OSAxMC41OSAwIDAxLTMuNTI1IDIuNzAyeiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9InByZWZpeF9fcHJlZml4X19jbGlwMF81MTNfNTY0NCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGg0NDB2NDQwSDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+);
     }
 
+    @media screen and (min-width: $w1440) {
+        width: 620px;
+        height: 620px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
     &__wrp {
         @media screen and (min-width: $w992) {
             opacity: 0;
@@ -471,6 +478,12 @@
         text-align: center;
         padding-bottom: 16px;
 
+        @media screen and (min-width: $w1440) {
+            font-size: 20px;
+            max-width: 70%;
+            padding-bottom: 24px;
+        }
+
         @media screen and (min-width: $w992) {
             max-width: 90%;
             margin: 0 auto;
@@ -485,6 +498,10 @@
         font-weight: 700;
         padding-bottom: 16px;
 
+        @media screen and (min-width: $w1440) {
+            font-size: 32px;
+        }
+
         & h1,
         & span {
             font-size: 24px;
@@ -492,7 +509,11 @@
             font-weight: 700;
             display: inline-block;
             border-bottom: 2px solid #ffffff49;
-            padding-bottom: 5px
+            padding-bottom: 5px;
+
+            @media screen and (min-width: $w1440) {
+                font-size: 32px;
+            }
         }
 
     }
@@ -505,12 +526,20 @@
         max-width: 160px;
         margin: 0 auto;
         transition: 0.3s ease;
+
+        @media screen and (min-width: $w1440) {
+            max-width: 245px;
+        }
     }
 
     &:hover {
         & .fb-device {
             &__image {
                 max-width: 170px;
+
+                @media screen and (min-width: $w1440) {
+                    max-width: 255px;
+                }
             }
         }
     }
