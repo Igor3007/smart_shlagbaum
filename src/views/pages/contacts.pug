@@ -5,8 +5,10 @@ include ../../blocks/components/video/video.pug
 include ../../blocks/modules/aside-nav/aside-nav.pug
 include ../../blocks/modules/banner-top/banner-top.pug
 include ../../blocks/modules/helper-sidebar/helper-sidebar.pug
-include ../../blocks/modules/about-text-block/about-text-block.pug
-include ../../blocks/modules/about-cards/about-cards.pug
+include ../../blocks/modules/contacts-text-block/contacts-text-block.pug
+include ../../blocks/modules/contacts-map-block/contacts-map-block.pug
+include ../../blocks/modules/form-cooperation/form-cooperation.pug
+
 
 
 block variables
@@ -17,8 +19,8 @@ block variables
 block content
 
     +banner-top-with-img({
-        title: 'Вопросы и ответы',
-        image: '/img/detail/about-top-banner.jpg'
+        title: 'Контакты',
+        image: '/img/detail/contacts.jpg'
     })
 
     section.section-page-details
@@ -26,7 +28,8 @@ block content
             .page-details
                 .page-details__aside
                     +aside-info({
-                        text: 'ООО «МОИ УМНЫЕ СЕРВИСЫ» – опытная команда разработчиков с обширной практикой внедрения и эксплуатации систем видеонаблюдения, видеоаналитики и СКУД'
+                        title: 'Контакты',
+                        text: 'Пишите, задавайте вопросы, выходите на связь – мы всегда готовы ответить или приступить к сотрудничеству!'
                     })
 
                     +aside-info-banner()
@@ -36,11 +39,18 @@ block content
                         .page-details__breabcrumbs
                             +breadcrumb([
                                 'Главная',
-                                'Вопросы и ответы',
+                                'Контакты',
                             ])
 
                         .page-details__wrp
                             .page-details__article
+                        .block-fullpage.bordered
+                            +contacts-text-block()
+                        .block-fullpage.bordered.colored
+                            +contacts-map-block()
+
+                    .page-details__page-form
+                        +form-contacts()
                                  
 
 

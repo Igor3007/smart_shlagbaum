@@ -1,19 +1,36 @@
 .block-fullpage {
-    padding: 25px 15px;
-    background-color: var(--bg-01);
-    margin-top: 30px;
+  padding: 25px 15px;
+  background-color: var(--bg-01);
+  margin-top: 30px;
 
-    @media screen and (min-width: $w1440) {
-        padding: 80px;
-    }
+  @media screen and (min-width: $w1440) {
+    padding: 80px;
+  }
 
-    @media screen and (min-width: $w480) {
-        padding: 30px;
+  @media screen and (min-width: $w480) {
+    padding: 30px;
 
-    }
+  }
 
-    @media screen and (max-width: $w480) {
-        margin-left: -15px;
-        margin-right: -15px;
-    }
+  @media screen and (max-width: $w480) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+}
+
+.bordered {
+  border-radius: 8px;
+  @media screen and (min-width: $w1440) {
+    padding: 40px;
+  }
+}
+
+.colored {
+  background-color: #253678;
+  margin-top: 8px;
+}
+
+.marginared {
+  margin: 0;
 }

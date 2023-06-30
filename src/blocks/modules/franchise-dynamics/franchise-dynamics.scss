@@ -1,0 +1,160 @@
+.franchise-dynamics {
+  &__wrapper {
+    @media screen and (min-width: $w1440) {
+      display: flex;
+    }
+  }
+
+  &__text-block {
+    @media screen and (min-width: $w1440) {
+      flex: 1 1 30%;
+      margin-right: 80px;
+    }
+  }
+
+  &__dynamics {
+    display: flex;
+    align-items: flex-end;
+    @media screen and (min-width: $w1440) {
+      flex: 1 1 70%;
+    }
+  }
+
+  &__first-year {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 420px;
+
+
+  }
+
+  &__first-year-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #222429;
+    margin-bottom: 16px;
+    @media screen and (min-width: $w1660) {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+
+  &__first-year-chart {
+    padding-top: 60%;
+    background: #E2E6EB;
+    border-left: 4px solid #CED2D6;
+    border-top: 4px solid #222429;
+  }
+
+  &__first-year-sub-title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #222429;
+    margin-top: 16px;
+
+  }
+
+  &__last-year {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 420px;
+
+
+  }
+
+  &__last-year-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #344CA8;
+    @media screen and (min-width: $w1660) {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+
+  &__last-year-title-add {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #344CA8;
+    margin: 8px 0;
+    @media screen and (min-width: $w1660) {
+      font-size: 18px;
+    }
+
+  }
+
+  &__last-year-chart {
+    padding-top: 80%;
+    border-top: 4px solid #344CA8;
+    border-left: 4px solid #CDD5F5;
+    background: #EBEEFA;
+  }
+
+  &__last-year-sub-title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #222429;
+    margin-top: 16px;
+
+
+  }
+
+
+  &__h2 {
+
+    padding-bottom: 0.2em;
+    @include font-h2;
+    @media screen and (min-width: $w1440) {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 44px;
+    }
+
+  }
+
+  &__text {
+    & p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #222429;
+
+    }
+  }
+
+  &__content {
+    margin-top: 24px;
+    padding: 24px 32px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    @media screen and (min-width: $w1440) {
+      margin-top: 48px;
+    }
+  }
+
+  &__content-title {
+    h4 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 46px;
+      color: #253678 !important;
+      margin-bottom: 8px;
+    }
+
+  }
+
+  &__content-text {
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 !important;
+      color: #222429;
+    }
+  }
+}

@@ -5,8 +5,11 @@ include ../../blocks/components/video/video.pug
 include ../../blocks/modules/aside-nav/aside-nav.pug
 include ../../blocks/modules/banner-top/banner-top.pug
 include ../../blocks/modules/helper-sidebar/helper-sidebar.pug
-include ../../blocks/modules/about-text-block/about-text-block.pug
-include ../../blocks/modules/about-cards/about-cards.pug
+include ../../blocks/modules/franchise-text-block/franchise-text-block.pug
+include ../../blocks/modules/franchise-dynamics/franchise-dynamics.pug
+include ../../blocks/modules/franchise-service/franchise-service.pug
+include ../../blocks/modules/form-cooperation/form-cooperation.pug
+
 
 
 block variables
@@ -18,7 +21,7 @@ block content
 
     +banner-top-with-img({
         title: 'Франшиза',
-        image: '/img/detail/about-top-banner.jpg'
+        image: '/img/detail/franchise.jpg'
     })
 
     section.section-page-details
@@ -26,7 +29,8 @@ block content
             .page-details
                 .page-details__aside
                     +aside-info({
-                        text: 'ООО «МОИ УМНЫЕ СЕРВИСЫ» – опытная команда разработчиков с обширной практикой внедрения и эксплуатации систем видеонаблюдения, видеоаналитики и СКУД'
+                        title: 'Франшиза',
+                        text: 'Приобретение франшизы IT-сервиса «МОЙ УМНЫЙ ШЛАГБАУМ», позволяет войти в IT-рынок без потери времени и вложения значительных средств на разработку и поддержку продукта, сразу приступив к наиболее привлекательной части любого бизнеса – продажам.'
                     })
 
                     +aside-info-banner()
@@ -41,6 +45,17 @@ block content
 
                         .page-details__wrp
                             .page-details__article
+                                +franchise-text-block()
+                    .page-details__page-form
+                        .block-fullpage
+                            .block-fullpage__wrp
+                                +franchise-dynamics()
+                        .block-fullpage.colored.marginared
+                            .block-fullpage__wrp
+                                +franchise-service()
+                    .page-details__page-form
+                        +form-cooperation--white()
+
                                  
 
 
