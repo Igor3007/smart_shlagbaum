@@ -2,7 +2,8 @@ input {
     display: block;
     width: 100%;
     height: 48px;
-    border: 1px solid $gray-92;
+    border-radius: 6px;
+    border: 1px solid var(--blue-extralight, #CDD5F5);
     padding: 0 15px;
     border-radius: 4px;
     transition: 0.3s ease;
@@ -12,7 +13,7 @@ input {
     }
 
     &:focus {
-        border: 1px solid $gray-56;
+        border: 1px solid $main;
     }
 }
 
@@ -39,14 +40,13 @@ input {
         padding-right: rem(15);
         padding-top: 8px;
         padding-bottom: 10px;
-        border: 1px solid $gray-92;
         box-sizing: border-box;
-        border-radius: 4px;
         width: auto;
         flex-grow: 1;
-        background-color: #fff;
+        background-color: transparent;
         transition: border, background 0.4s ease;
-
+        border-radius: 6px;
+        border: 1px solid var(--blue-extralight, #CDD5F5);
 
 
 
@@ -57,8 +57,7 @@ input {
         }
 
         &:focus {
-            border-color: $gray-56;
-            background-color: #fff;
+            border-color: $main;
             outline: none;
         }
     }
@@ -110,15 +109,18 @@ input {
         max-width: 100%;
         resize: vertical;
         width: 100%;
-        border: 1px solid $gray-92;
-        border-radius: 5px;
+
+
         font-size: 14px;
         padding: rem(15);
         line-height: 140%;
         outline: none !important;
+        background: transparent;
+        border-radius: 6px;
+        border: 1px solid var(--blue-extralight, #CDD5F5);
 
         &:focus {
-            border-color: $gray-56;
+            border-color: $main;
             outline: none !important;
         }
     }
@@ -133,7 +135,7 @@ input {
 
     &__note {
 
-        font-size: 13px;
+        font-size: 14px;
         color: $main;
         width: 100%;
 
@@ -188,9 +190,11 @@ input {
         flex-direction: column;
         width: 100%;
 
+
+
         @media screen and (min-width: $w760) {
             flex-direction: row;
-            align-items: flex-start;
+            align-items: center;
             margin: -10px;
             width: calc(100% + 20px);
         }
@@ -213,10 +217,26 @@ input {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        position: relative;
+
+        & label:not(.checkbox) {
+            background-color: var(--bg-01);
+            font-size: 13px;
+            position: absolute;
+            top: -7px;
+            left: 7px;
+            padding: 0 10px;
+            color: var(--text-02, #787D8F);
+
+            @media screen and (min-width: $w760) {
+                top: 5px;
+                left: 21px;
+            }
+        }
 
         & div.error {
             color: $red;
-            font-size: 12px;
+            font-size: 13px;
             padding-top: 5px;
             padding-left: 3px;
             width: 100%;
@@ -275,4 +295,8 @@ input {
 
 
 
+}
+
+.form__subitem.form__subitem--free {
+    width: auto;
 }

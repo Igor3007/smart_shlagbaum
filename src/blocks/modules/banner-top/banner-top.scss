@@ -17,6 +17,7 @@
     display: flex;
     justify-content: flex-end;
     max-width: 50%;
+    width: 50%;
 
     & img {
       max-width: 100%;
@@ -75,59 +76,55 @@
   background-color: #253678;
 
   .banner-top {
-    padding: 0;
+    // padding: 0;
 
-    &__title {
-      @media screen and (min-width: 576.98px) {
-        min-height: 180px;
-      }
-      @media screen and (min-width: 767.98px) {
-        min-height: 80px;
-      }
-      @media screen and (min-width: 992.98px) {
-        min-height: 120px;
-      }
-      @media screen and (min-width: 1200px) {
-        min-height: 185px;
-      }
-      @media screen and (min-width: 1440.98px) {
-        min-height: 230px;
-      }
-    }
+    // &__title {
+    //   @media screen and (min-width: 576.98px) {
+    //     min-height: 180px;
+    //   }
+    //   @media screen and (min-width: 767.98px) {
+    //     min-height: 80px;
+    //   }
+    //   @media screen and (min-width: 992.98px) {
+    //     min-height: 120px;
+    //   }
+    //   @media screen and (min-width: 1200px) {
+    //     min-height: 185px;
+    //   }
+    //   @media screen and (min-width: 1440.98px) {
+    //     min-height: 230px;
+    //   }
+    // }
 
     &__image {
       justify-content: center;
+      margin-top: -25px;
     }
   }
 }
 
 
 .section-banner-top--with-img {
+
+  padding-top: 9%;
+
   .banner-top {
-    min-height: 240px;
-    @media screen and (min-width: 1440.98px) {
-      min-height: 375px;
-    }
+    // min-height: 240px;
+
+    // @media screen and (min-width: 1440.98px) {
+    //   min-height: 375px;
+    // }
 
     &__title {
-      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDk2MCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik00MS40MDQ5IDIwMEg4MDQuMzMzSDk2MEw4NTUuNDU5IDIuMTMxNDJDODU0Ljc2NiAwLjgyMDMxNSA4NTMuNDA1IDAgODUxLjkyMiAwSDEzNS4wNzVMNDEuNDA0OSAyMDBaIiBmaWxsPSIjMjUzNjc4Ii8+CjxwYXRoIGQ9Ik0wIDIwMEw5My42NzAzIDBIMFYyMDBaIiBmaWxsPSIjMjUzNjc4Ii8+Cjwvc3ZnPgo=);
-      min-height: 100px;
-      @media screen and (min-width: 767.98px) {
-        min-height: 120px;
-      }
-      @media screen and (min-width: 992.98px) {
-        min-height: 140px;
-      }
-      @media screen and (min-width: 1200px) {
-        min-height: 185px;
-      }
-      @media screen and (min-width: 1440.98px) {
-        min-height: 240px;
+      @media screen and (max-width: $w992) {
+        min-height: 80px;
       }
 
-      h1 {
-        color: #FFFFFF;
-      }
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTY1NiIgaGVpZ2h0PSIyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTY5NiAyMDBILS41Vi41NzRMNzg5LjY3IDAgNjk2IDIwMHptNDEuNDA1IDBIMTY1NkwxNTUxLjQ2IDIuMTMxYTQuMDE4IDQuMDE4IDAgMDAtMS40Ny0xLjU1NyA0LjAzIDQuMDMgMCAwMC0yLjA3LS41NzRIODMxLjA3NWwtOTMuNjcgMjAweiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik02OTYgMjAwSC0uNVYuNTc0TDc4OS42NyAwIDY5NiAyMDB6bTQxLjQwNSAwSDE2NTZMMTU1MS40NiAyLjEzMWE0LjAxOCA0LjAxOCAwIDAwLTEuNDctMS41NTcgNC4wMyA0LjAzIDAgMDAtMi4wNy0uNTc0SDgzMS4wNzVsLTkzLjY3IDIwMHoiIGZpbGw9IiMyNTM2NzgiLz48L3N2Zz4=);
+    }
+
+    h1 {
+      color: #FFFFFF;
     }
   }
 }

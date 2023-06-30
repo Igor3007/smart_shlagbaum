@@ -5,6 +5,7 @@ include ../../blocks/components/video/video.pug
 include ../../blocks/modules/aside-nav/aside-nav.pug
 include ../../blocks/modules/banner-top/banner-top.pug
 include ../../blocks/modules/helper-sidebar/helper-sidebar.pug
+include ../../blocks/modules/form-cooperation/form-cooperation.pug
 
 
 block variables
@@ -41,7 +42,7 @@ block content
                             ])
 
                         .page-details__wrp
-                            .page-details__article
+                            .page-details__article.page-details__article--w880
                                 .formated-text
                                     p Эксплуатация шлагбаумов во дворах многоквартирных домов является серьёзной задачей, груз которой полностью ложится на плечи нескольких жителей, выбранных ответственными представителями на общем собрании.
                                     +picture("/img/common/courtyards-barrier")
@@ -54,7 +55,9 @@ block content
                                         li не нужно вызывать и ждать ремонтную бригаду, поскольку состояние объектов мониторится, как средствами визуального контроля, так и программно-аппаратными средствами сервиса;
                                         li с личным кабинетом работать максимально удобно как в веб-версии, так и через мобильные браузеры;
                                         li гибко настраиваемая система разовых и временных пропусков снимает все проблемы с доступом гостевого транспорта, доставки, такси и т.п.
-                            .page-details__sidebar
+                             
+                    .page-details__page-form
+                            +form-cooperation()
 
 
 

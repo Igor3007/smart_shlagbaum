@@ -1,0 +1,41 @@
+mixin part
+    .form-cooperation
+            .form-cooperation__text
+                .form-cooperation__title Приглашаем к сотрудничеству
+                .form-cooperation__desc Присоединяйтесь к франшизе, как под нашим флагманским брендом, так и под своим собственным товарным знаком.
+            .form-cooperation__form
+                .form
+                    .form__item
+                        .form__subitem
+                            label ФИО*
+                            input(type="text" placeholder="Ваше имя")
+                        .form__subitem
+                            label Номер телефона*
+                            input(type="text" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ")
+                    .form__item
+                        .form__subitem
+                            label E-mail
+                            input(type="text" placeholder="Адрес электронной почты")
+                        .form__subitem
+                            label Тема
+                            input(type="text" placeholder="Если хотите уточнить")
+                    .form__item
+                        .form__subitem
+                            label E-mail
+                            textarea(placeholder="Сообщение")
+                    .form__item
+                        .form__subitem.form__subitem--free
+                            button.btn.btn-full Отправить
+                        .form__subitem.form__subitem--free
+                            .form__note
+                                +checkbox('Ознакомлен с <a href="policy.html" >Политикой конфиденциальности</a>')
+
+
+
+mixin form-cooperation--white
+    section.section-form-cooperation.section-form-cooperation--white
+        +part()
+mixin form-cooperation
+    section.section-form-cooperation
+        +part()
+        

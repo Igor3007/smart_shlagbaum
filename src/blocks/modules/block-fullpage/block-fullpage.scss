@@ -1,0 +1,19 @@
+.block-fullpage {
+    padding: 25px 15px;
+    background-color: var(--bg-01);
+    margin-top: 30px;
+
+    @media screen and (min-width: $w1440) {
+        padding: 80px;
+    }
+
+    @media screen and (min-width: $w480) {
+        padding: 30px;
+
+    }
+
+    @media screen and (max-width: $w480) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}

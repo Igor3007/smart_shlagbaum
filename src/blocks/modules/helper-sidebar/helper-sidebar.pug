@@ -12,8 +12,8 @@ mixin helper-sidebar()
             form(action='#', method='#')
                 .helper-sidebar__form-field
                     label(for='#phone-number') Номер телефона
-                    input(id='phone-number', placeholder='+7(ХХХ)ХХХ-ХХ-ХХ')
-                button(type='submit') ок
+                    input(id='phone-number' type="tel" placeholder='+7(ХХХ)ХХХ-ХХ-ХХ' data-maska="+7(###)###-##-##")
+                button.btn(type='submit') ок
         p Список телефонов управляющих шлагбаумом:
         .helper-sidebar__table-wrapper
             table

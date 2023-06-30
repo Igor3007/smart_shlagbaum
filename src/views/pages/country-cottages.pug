@@ -5,6 +5,7 @@ include ../../blocks/components/video/video.pug
 include ../../blocks/modules/aside-nav/aside-nav.pug
 include ../../blocks/modules/banner-top/banner-top.pug
 include ../../blocks/modules/helper-sidebar/helper-sidebar.pug
+include ../../blocks/modules/form-cooperation/form-cooperation.pug
 
 
 block variables
@@ -41,12 +42,14 @@ block content
                             ])
 
                         .page-details__wrp
-                            .page-details__article
+                            .page-details__article.page-details__article--w880
                                 .formated-text
                                     p Обслуживание КПП при въезде в котеджных или дачных посёлоках, задача достаточно трудозатратная и финансово ёмкая, поэтому далеко не все решаются на его организации, в особенности без нарушения Правил противопожарной безопасности в РФ.
                                     +picture("/img/common/cottages")
                                     p Благодаря сервисам «МОЙ УМНЫЙ ШЛАГБАУМ» возможно организовать КПП, любой интенсивности проездов, в короткие сроки с бюджетным вариантам, максимально приближенным к стоимости шлагбаумов (ворот) с полным соблюдением всех требований законодательства.
-                            .page-details__sidebar
+                            
+                    .page-details__page-form
+                        +form-cooperation()
 
 
 

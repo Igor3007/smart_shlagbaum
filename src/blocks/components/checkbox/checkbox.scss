@@ -65,8 +65,8 @@
         // }
 
         &:checked~.checkbox__elem {
-            background-color: $accent-1-1;
-            border-color: $accent-1-1;
+            background-color: $main;
+            border-color: $main;
             z-index: 2;
         }
 

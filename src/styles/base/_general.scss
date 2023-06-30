@@ -352,6 +352,10 @@ input[type="date"] {
         margin: 10px 0;
         line-height: 150%;
 
+        @media screen and (min-width: $w1440) {
+            margin: 20px 0;
+        }
+
 
     }
 
@@ -542,7 +546,7 @@ input[type="date"] {
 
 @mixin font-h1 {
     font-size: 22px;
-    font-weight: 800;
+    font-weight: bold;
     line-height: 115%;
 
     @media screen and (min-width: $w760) {
@@ -580,7 +584,13 @@ input[type="date"] {
     line-height: 133%;
     font-size: 24px;
 
+
+
     @media screen and (min-width: $w760) {
+        font-size: 28px;
+    }
+
+    @media screen and (min-width: $w1440) {
         font-size: 36px;
     }
 

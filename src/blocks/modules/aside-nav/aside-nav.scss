@@ -58,6 +58,7 @@
                 font-weight: 500;
                 color: var(--text-01, #222429);
                 transition: 0.3s ease;
+                transform: translateX(0);
 
                 @media screen and (min-width: $w1440) {
                     font-size: 18px;
@@ -89,6 +90,7 @@
                     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTkgMTlsNy03LTctNyIgc3Ryb2tlPSIjMjUzNjc4IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==);
 
                     @media screen and (min-width: $w1440) {
+                        min-width: 24px;
                         width: 24px;
                         height: 24px;
                     }

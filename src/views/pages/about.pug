@@ -7,6 +7,8 @@ include ../../blocks/modules/banner-top/banner-top.pug
 include ../../blocks/modules/helper-sidebar/helper-sidebar.pug
 include ../../blocks/modules/about-text-block/about-text-block.pug
 include ../../blocks/modules/about-cards/about-cards.pug
+include ../../blocks/modules/form-cooperation/form-cooperation.pug
+ 
 
 
 block variables
@@ -15,7 +17,6 @@ block variables
 
 
 block content
-
 
     +banner-top-with-img({
         title: 'О нас',
@@ -44,6 +45,23 @@ block content
                             .page-details__article
                                 +about-text-block()
                                 +about-cards()
+                    .page-details__page-form
+                        .block-fullpage
+                            .block-fullpage__wrp
+                                .formated-text
+                                    h3 Нейронные сети глубокого обучения
+                                    p Работа системы базируется на распознавании изображения с видеокамеры средствами нейронных сетей глубокого обучения.  По сути, мы повторили все значимые действия профессионального охранника на КПП алгоритмами искусственного интеллекта, который работая круглосуточно никогда не отлучается, не отдыхает, не болеет, не обманывает, не требует прибавки к зарплате и т.п.
+                                    +picture('/img/common/ai') 
+                                    p За счёт этого образуется экономическая выгода, которую мы предлагаем вам разделить вместе с нами, совместно внедряя по франшизе сервис «МОЙ УМНЫЙ ШЛАГБАУМ» на объекты:
+                                    ul
+                                        li многоуровневые и плосткостные паркинги;
+                                        li дачные и коттеджные поселки;
+                                        li дворы многоквартирных домов;
+                                        li торговые центры, магазины и рестораны;
+                                        li гостиницы и дома отдыха;
+                                        li промышленные, складские и логистческие центры.
+
+                        +form-cooperation--white()
 
 
 
