@@ -37,4 +37,4 @@ mixin card-hardware(data)
             +picturePng(data.image)
         .card-hardware__title= data.title
         .card-hardware__button
-            button.btn Заказать
+            button.btn(data-modal="/parts/_popup-order.html" data-params=data.title) Заказать

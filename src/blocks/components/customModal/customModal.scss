@@ -45,9 +45,9 @@
         right: 0;
         bottom: 0;
         z-index: 101;
-        background-color: #000;
+        background-color: #253678;
         transition: 0.3s ease;
-        opacity: 0.75;
+        opacity: 0.9;
     }
 
     &__wrp {
@@ -130,7 +130,7 @@
     stroke-width: 2px;
 
     &:hover {
-        stroke: #222;
+        stroke: var(--main);
     }
 }
 

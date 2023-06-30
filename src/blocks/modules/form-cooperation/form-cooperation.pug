@@ -8,10 +8,10 @@ mixin part()
                     .form__item
                         .form__subitem
                             label ФИО*
-                            input(type="text" placeholder="Ваше имя")
+                            input(type="text" placeholder="Ваше имя" required)
                         .form__subitem
                             label Номер телефона*
-                            input(type="text" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ")
+                            input(type="text" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ" data-maska="+7(###)###-##-##" required)
                     .form__item
                         .form__subitem
                             label E-mail
@@ -21,8 +21,8 @@ mixin part()
                             input(type="text" placeholder="Если хотите уточнить")
                     .form__item
                         .form__subitem
-                            label E-mail
-                            textarea(placeholder="Сообщение")
+                            label Сообщение
+                            textarea(placeholder="Текст сообщения")
                     .form__item
                         .form__subitem.form__subitem--free
                             button.btn.btn-full Отправить

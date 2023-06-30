@@ -1,0 +1,35 @@
+mixin popup-form(data)
+   .popup-form
+        .popup-form__wrp
+            .popup-form__title= data.title
+            .popup-form__desc= data.desc
+            .popup-form__form
+                form(action="/action.php")
+                    .form
+                        .form__item
+                            .form__subitem
+                                label ФИО*
+                                input(type="text" placeholder="Ваше имя" required)
+                        .form__item
+                            .form__subitem
+                                label Номер телефона*
+                                input(type="text" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ" data-maska="+7(###)###-##-##" required)
+                        .form__item
+                            .form__subitem
+                                label E-mail
+                                input(type="text" placeholder="Адрес электронной почты")
+                        .form__item
+                            .form__subitem
+                                label Тема
+                                input(type="text" placeholder="Если хотите уточнить")
+                        .form__item
+                            .form__subitem
+                                label E-mail
+                                textarea(placeholder="Сообщение")
+                        .form__item
+                            .form__subitem.form__subitem--free
+                                button.btn.btn-full Отправить
+                        .form__item
+                            .form__subitem.form__subitem--free
+                                .form__note
+                                    +checkbox('Ознакомлен с <a href="policy.html" >Политикой конфиденциальности</a>')

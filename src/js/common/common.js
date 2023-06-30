@@ -286,10 +286,14 @@
      maska 
      ==================================================*/
 
-     const {
-         MaskInput,
-     } = Maska
-     new MaskInput("[data-maska]")
+     function initMaska() {
+         const {
+             MaskInput,
+         } = Maska
+         new MaskInput("[data-maska]")
+     }
+
+     initMaska();
 
      /* ==================================================
      find 
@@ -325,10 +329,10 @@
      function initMapFooter() {
          window.loadApiYmaps((ymaps) => {
 
+             //map footer
              if (document.querySelector('#footer-minimap')) {
 
                  const coordinates = document.querySelector('#footer-minimap').dataset.coordinates.split(',')
-
                  ymaps.ready(function () {
                      const myMap = new ymaps.Map('footer-minimap', {
                          center: coordinates,
@@ -348,8 +352,31 @@
                      });
                      myMap.geoObjects.add(myPlacemark)
                  })
+             }
 
+             //map contacts
+             if (document.querySelector('#contact-minimap')) {
 
+                 const coordinates = document.querySelector('#contact-minimap').dataset.coordinates.split(',')
+                 ymaps.ready(function () {
+                     const myMap = new ymaps.Map('contact-minimap', {
+                         center: coordinates,
+                         zoom: 14,
+                         controls: []
+                     }, {
+                         searchControlProvider: 'yandex#search',
+                         suppressMapOpenBlock: true
+                     });
+                     const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                         hintContent: 'Мой умный шлагбаум',
+                     }, {
+                         iconLayout: 'default#image',
+                         iconImageHref: '/img/svg/ic_pin.svg',
+                         iconImageSize: [60, 68],
+                         iconImageOffset: [-30, -68]
+                     });
+                     myMap.geoObjects.add(myPlacemark)
+                 })
              }
          })
      }
@@ -397,7 +424,9 @@
                  }, (status, response) => {
 
                      const instansePopup = new afLightbox()
-                     instansePopup.open(response)
+                     instansePopup.open(response, (instanse) => {
+                         initMaska()
+                     })
                  })
 
              })

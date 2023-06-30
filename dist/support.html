@@ -158,7 +158,7 @@
                         <div class="support-text-block__wrp">
                           <div class="support-text-block__h2">
                             <h2>Круглосуточная техническая поддержка</h2>
-                            <button class="btn">Обратиться в Техподдержку</button>
+                            <button class="btn" data-modal="/parts/_popup-support.html">Обратиться в Техподдержку</button>
                           </div>
                           <div class="support-text-block__text"><span>Чтобы исключить дополнительные расходы наших франчайзи, мы полностью возлагаем на себя ответственность за круглосуточную техническую поддержку администраторов и пользователей сервисов «МОЙ УМНЫЙ ШЛАГБАУМ», как под флагманским, так и под партнёрскими брендами.</span>
                             <p>Также <strong>круглосуточно осуществляется и дежурство DevOps‑инженеров,</strong> обеспечивающих стабильную работу сервисов на серверном оборудовании с двойным резервированием вычислительных мощностей в нескольких независимых дата-центрах.</p>
@@ -187,11 +187,11 @@
                         <div class="form__item">
                           <div class="form__subitem">
                             <label>ФИО*</label>
-                            <input type="text" placeholder="Ваше имя"/>
+                            <input type="text" placeholder="Ваше имя" required="required"/>
                           </div>
                           <div class="form__subitem">
                             <label>Номер телефона*</label>
-                            <input type="text" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ"/>
+                            <input type="text" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ" data-maska="+7(###)###-##-##" required="required"/>
                           </div>
                         </div>
                         <div class="form__item">
@@ -206,8 +206,8 @@
                         </div>
                         <div class="form__item">
                           <div class="form__subitem">
-                            <label>E-mail</label>
-                            <textarea placeholder="Сообщение"></textarea>
+                            <label>Сообщение</label>
+                            <textarea placeholder="Текст сообщения"></textarea>
                           </div>
                         </div>
                         <div class="form__item">

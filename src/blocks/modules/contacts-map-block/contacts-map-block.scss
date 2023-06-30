@@ -51,6 +51,7 @@
 
 
   }
+
   &__map-contacts {
     & .map-overlay-contacts {
       padding-top: 40%;
@@ -60,7 +61,7 @@
       position: relative;
       overflow: hidden;
 
-      & > #footer-minimap {
+      &>#contact-minimap {
         position: absolute;
         left: 0;
         top: 0;

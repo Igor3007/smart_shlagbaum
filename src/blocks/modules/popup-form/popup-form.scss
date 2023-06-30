@@ -1,0 +1,44 @@
+.popup-form {
+    padding: 30px;
+    max-width: 490px;
+
+    &__title {
+        @include font-h4;
+        padding-bottom: 12px;
+    }
+
+    &__desc {
+        line-height: 140%;
+        padding-bottom: 25px;
+    }
+
+    & .form {
+
+        &__subitem {
+            &>label {
+                background-color: #fff;
+            }
+
+            & .btn {
+                margin-top: 15px;
+            }
+        }
+
+
+
+        &__note {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        & input[type=date],
+        & input[type=tel],
+        & input[type=password],
+        & input[type=text],
+        & input[type=email] {
+            @media screen and (min-width: $w1440) {
+                height: 58px;
+            }
+        }
+    }
+}
