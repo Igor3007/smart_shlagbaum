@@ -1,6 +1,10 @@
 .popup-form {
-    padding: 30px;
+    padding: 20px 15px;
     max-width: 490px;
+
+    @media screen and (min-width: $w576) {
+        padding: 30px;
+    }
 
     &__title {
         @include font-h4;
@@ -21,6 +25,14 @@
 
             & .btn {
                 margin-top: 15px;
+            }
+        }
+
+        & .checkbox__text {
+            @media screen and (max-width: 400px) {
+                text-align: left;
+                width: auto;
+                max-width: 172px;
             }
         }
 

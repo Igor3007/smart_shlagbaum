@@ -31,4 +31,4 @@ mixin card-software(data)
     .card-software
         .card-software__title= data.title
         .card-software__button
-            button.btn.btn-white Купить лицензию
+            button.btn.btn-white(data-modal="/parts/_popup-shop.html" data-params=data.title) Купить лицензию

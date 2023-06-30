@@ -423,7 +423,9 @@
                      url: item.dataset.modal
                  }, (status, response) => {
 
-                     const instansePopup = new afLightbox()
+                     const instansePopup = new afLightbox({
+                         mobileInBottom: true
+                     })
                      instansePopup.open(response, (instanse) => {
                          initMaska()
                      })

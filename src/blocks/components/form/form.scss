@@ -299,4 +299,8 @@ input {
 
 .form__subitem.form__subitem--free {
     width: auto;
+
+    @media screen and (max-width: $w480) {
+        width: 100%;
+    }
 }

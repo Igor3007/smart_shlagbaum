@@ -25,19 +25,21 @@ body {
     scrollbar-width: thin !important;
 
 
-    &::-webkit-scrollbar {
-        width: 4px;
-        border-radius: 4px;
-    }
+    @media screen and (min-width: $w992) {
+        &::-webkit-scrollbar {
+            width: 4px;
+            border-radius: 4px;
+        }
 
-    &::-webkit-scrollbar-track {
-        background-color: #fff;
-        border-radius: 0;
-    }
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+            border-radius: 0;
+        }
 
-    &::-webkit-scrollbar-thumb {
-        background-color: var(--main);
-        border-radius: 0;
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--main);
+            border-radius: 0;
+        }
     }
 }
 

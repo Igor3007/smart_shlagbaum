@@ -39,8 +39,14 @@
     }
 
     &.open {
-        & .faq-item__arrow svg {
-            transform: rotate(-45deg);
+        & .faq-item {
+            &__arrow svg {
+                transform: rotate(-45deg);
+            }
+
+            &__title {
+                color: var(--main);
+            }
         }
 
         & .faq-item__answer {
