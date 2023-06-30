@@ -3717,7 +3717,6 @@ footer {
   height: 36px;
   align-items: center;
   color: #fff;
-  max-width: calc(100% - 36px);
   position: relative;
   text-align: center;
   justify-content: center;
