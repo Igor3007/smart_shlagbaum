@@ -1,0 +1,40 @@
+mixin hardware-cards()
+
+    -
+        const swCards = [
+            {
+                title: 'Многофункциональный РОУТЕР-СКУД',
+                image: '/img/detail/hardware/hw1',
+            },
+            {
+                title: 'Видеокамера для идентификации транспортных средств',
+                image: '/img/detail/hardware/hw2',
+            },
+            {
+                title: 'Оборудование для организации диспетчерского управления СКУД',
+                image: '/img/detail/hardware/hw3',
+            },
+            {
+                title: 'Приёмник управления именными радиопультами  ',
+                image: '/img/detail/hardware/hw4',
+            },
+            {
+                title: 'Приёмник RFID карт / меток  ',
+                image: '/img/detail/hardware/hw5',
+            },
+           
+        ]
+
+    section.hardware-cards
+        .hardware-cards__wrapper
+            each item in swCards
+                .hardware-cards__item: +card-hardware(item)
+             
+
+mixin card-hardware(data)
+    .card-hardware
+        .card-hardware__image
+            +picturePng(data.image)
+        .card-hardware__title= data.title
+        .card-hardware__button
+            button.btn Заказать

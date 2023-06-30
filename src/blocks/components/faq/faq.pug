@@ -7,7 +7,7 @@ mixin faq(data)
 
             .faq-item__title= item.title
             .faq-item__arrow
-              +icons('#ic_faq', 22)
+              .icon-cross
           .faq-item__answer
             each text in item.answer 
               p!= text

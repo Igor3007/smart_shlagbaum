@@ -1,11 +1,42 @@
+.faq {
+    padding-top: 12px;
+}
+
 .faq-item {
 
-    box-sizing: border-box;
-    margin-bottom: rem(20);
     cursor: pointer;
+    padding: 10px 15px;
+    background-color: var(--bg-01);
+    margin: 0 -15px;
 
-    background: #F5F5F5;
-    border-radius: rem(10);
+    @media screen and (min-width: $w760) {
+        margin: 0;
+    }
+
+    &:nth-child(even) {
+        background-color: #fff;
+
+        & .faq-item {
+            &__answer {
+                background-color: var(--bg-01);
+            }
+        }
+
+    }
+
+    @media screen and (min-width: $w1440) {
+        padding: 15px 80px;
+    }
+
+    @media screen and (min-width: $w480) {
+        padding: 30px;
+
+    }
+
+    @media screen and (max-width: $w480) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
 
     &.open {
         & .faq-item__arrow svg {
@@ -14,23 +45,35 @@
 
         & .faq-item__answer {
             max-height: rem(1000);
-            padding: 0 rem(25) rem(25);
+
+            margin-top: 15px;
+            padding: 18px 37px;
+            margin-bottom: 10px;
+            opacity: 1;
 
             @media screen and (min-width: $w760) {
-                padding: 0 rem(37) rem(25);
+                // padding: 0 rem(37) rem(25);
             }
 
+        }
+
+        & .icon-cross {
+            transform: rotate(360deg);
+
+            &::after {
+                transition: 0.5s ease 0.45s;
+                transform: rotate(90deg);
+            }
         }
     }
 
     &__question {
         display: flex;
         align-items: center;
-        padding: rem(20) rem(25);
-
+        padding: 14px 0;
 
         @media screen and (min-width: $w760) {
-            padding: rem(25) rem(37);
+            // padding: rem(25) rem(37);
         }
     }
 
@@ -40,12 +83,16 @@
         overflow: hidden;
         transition: 0.3s ease;
         color: #555;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 125%;
-        padding: 0 rem(25);
+        padding: 0 37px;
+        background-color: #fff;
+        border-radius: 8px;
+        line-height: 150%;
+        opacity: 0;
 
         @media screen and (min-width: $w760) {
-            padding: 0 rem(37);
+            font-size: 16px;
         }
 
         @media screen and (min-width: $w1440) {
@@ -58,10 +105,19 @@
 
     &__title {
         flex-grow: 1;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 120%;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 133%;
         color: #1B1A1C;
+
+
+        @media screen and (min-width: $w576) {
+            font-size: 18px;
+        }
+
+        @media screen and (min-width: $w1440) {
+            font-size: 20px;
+        }
 
     }
 
@@ -75,4 +131,47 @@
             transition: 0.3s ease;
         }
     }
+}
+
+
+.icon-cross {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    transition: 0.8s ease;
+
+    @media screen and (min-width: $w576) {
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+    }
+}
+
+.icon-cross::after,
+.icon-cross::before {
+    display: inline-block;
+    background: #6a6a6a;
+    position: absolute;
+    content: ""
+}
+
+.icon-cross::before {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px
+}
+
+.icon-cross::after {
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
 }
