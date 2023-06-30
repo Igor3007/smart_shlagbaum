@@ -364,5 +364,46 @@
          }
      })
 
+     /* =================================================
+     faq
+     =================================================*/
+
+     if (document.querySelectorAll('.faq-item__question')) {
+
+         const faqItems = document.querySelectorAll('.faq-item__question')
+
+
+         faqItems.forEach(function (item, index) {
+             item.addEventListener('click', function () {
+                 this.parentNode.classList.toggle('open')
+             })
+         })
+
+     }
+
+     /* =================================================
+     popups
+     =================================================*/
+
+     if (document.querySelector('[data-modal]')) {
+         const items = document.querySelectorAll('[data-modal]')
+
+         items.forEach(item => {
+             item.addEventListener('click', e => {
+
+                 window.ajax({
+                     type: 'GET',
+                     url: item.dataset.modal
+                 }, (status, response) => {
+
+                     const instansePopup = new afLightbox()
+                     instansePopup.open(response)
+                 })
+
+             })
+         })
+     }
+
+
 
  });

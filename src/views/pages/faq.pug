@@ -7,6 +7,8 @@ include ../../blocks/modules/banner-top/banner-top.pug
 include ../../blocks/modules/helper-sidebar/helper-sidebar.pug
 include ../../blocks/modules/about-text-block/about-text-block.pug
 include ../../blocks/modules/about-cards/about-cards.pug
+include ../../blocks/components/faq/faq.pug
+include ../../blocks/modules/form-cooperation/form-cooperation.pug
 
 
 block variables
@@ -18,7 +20,7 @@ block content
 
     +banner-top-with-img({
         title: 'Вопросы и ответы',
-        image: '/img/detail/about-top-banner.jpg'
+        image: '/img/detail/faq-top-banner.jpg'
     })
 
     section.section-page-details
@@ -26,7 +28,9 @@ block content
             .page-details
                 .page-details__aside
                     +aside-info({
-                        text: 'ООО «МОИ УМНЫЕ СЕРВИСЫ» – опытная команда разработчиков с обширной практикой внедрения и эксплуатации систем видеонаблюдения, видеоаналитики и СКУД'
+                        icon: '#ic_faq',
+                        title:'Вопросы и ответы',
+                        text: 'Ответы на самые популярные вопросы. Также вы можете задать свой вопрос на этой странице ниже',
                     })
 
                     +aside-info-banner()
@@ -39,8 +43,10 @@ block content
                                 'Вопросы и ответы',
                             ])
 
-                        .page-details__wrp
-                            .page-details__article
+                         
+                    .page-details__page-form
+                        +faq(app.faq)
+                        +form-cooperation()
                                  
 
 
