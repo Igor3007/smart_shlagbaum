@@ -439,6 +439,40 @@ input[type="date"] {
     & strong {
         font-weight: 700;
     }
+
+    & .note {
+        background: var(--bg-01);
+        padding: 16px;
+        border-radius: 8px;
+        margin: 1.5em 0;
+
+        & strong {
+            color: $main;
+            font-size: 20px;
+            font-weight: 600;
+
+            display: block;
+        }
+
+        & p {
+            margin: 0.7em 0;
+        }
+    }
+}
+
+.large-text {
+
+    @media screen and (min-width: $w1440) {
+        font-size: 20px;
+    }
+
+    @media screen and (min-width: $w1200) {
+        font-size: 18px;
+    }
+}
+
+.w880 {
+    max-width: 880px;
 }
 
 
