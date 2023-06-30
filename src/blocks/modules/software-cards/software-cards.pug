@@ -1,0 +1,34 @@
+mixin software-cards()
+
+    -
+        const swCards = [
+            {
+                title: 'ПО для распознавания спецтранспорта, ГРЗ, марки / модели / цвета ТС ',
+                text: '',
+            },
+            {
+                title: 'ПО для микросервисов вспомогательных методов открытия облачного СКУД и организации облачного ЛК администратора и пользователей',
+                text: '',
+            },
+            {
+                title: 'ПО для сервиса удалённой диспетчеризации ограждающих устройств и контрольно-пропускных пунктов ',
+                text: '',
+            },
+            {
+                title: 'ПО для интеграции сервисов в мобильное приложение iOS и Android ',
+                text: '',
+            },
+           
+        ]
+
+    section.software-cards
+        .software-cards__wrapper
+            each item in swCards
+                .software-cards__item: +card-software(item)
+             
+
+mixin card-software(data)
+    .card-software
+        .card-software__title= data.title
+        .card-software__button
+            button.btn.btn-white Купить лицензию

@@ -1,0 +1,74 @@
+.software-cards {
+    &__wrapper {
+        margin: -4px;
+
+        @media screen and (min-width: $w992) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        padding: 4px;
+        flex-grow: 1;
+        flex-basis: 420px;
+    }
+
+}
+
+.card-software {
+    padding: 24px;
+    background-color: var(--main);
+    color: #fff;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s ease;
+
+
+
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        padding-bottom: 30px;
+        line-height: 140%;
+
+        @media screen and (min-width: $w1440) {
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        line-height: 140%;
+    }
+
+    &__button {
+        clip-path: polygon(35px 0, 100% 0, 100% 100%, 0% 100%);
+        background-color: rgba(255, 255, 255, 0.199);
+        padding: 16px 16px 16px 40px;
+        margin-bottom: -24px;
+        margin-right: -24px;
+        display: inline-flex;
+        margin-left: auto;
+        margin-top: auto;
+
+        transition: 0.3s ease;
+
+        @media screen and (min-width: $w576) {
+            padding: 24px 24px 24px 48px;
+        }
+    }
+
+    &:hover {
+        background-color: var(--blue-medium, #515E93);
+
+
+
+        & .card-software {
+            &__button {
+                background-color: transparent;
+            }
+        }
+    }
+}

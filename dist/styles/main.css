@@ -3728,6 +3728,8 @@ footer {
 
 .section-banner-top--with-img {
   padding-top: 9%;
+  background-position: right bottom;
+  background-size: cover;
 }
 
 .section-banner-top--with-img .banner-top__title {
@@ -4134,6 +4136,10 @@ footer {
 .section-about-text-block {
   padding-top: 30px;
   padding-bottom: 60px;
+}
+
+.section-about-text-block--software .about-text-block__h2 {
+  font-size: 32px;
 }
 
 .about-text-block__h2 {
@@ -4598,6 +4604,58 @@ footer {
   padding: 25px 15px;
   background-color: var(--bg-01);
   margin-top: 30px;
+}
+
+.software-cards__wrapper {
+  margin: -4px;
+}
+
+.software-cards__item {
+  padding: 4px;
+  flex-grow: 1;
+  flex-basis: 420px;
+}
+
+.card-software {
+  padding: 24px;
+  background-color: var(--main);
+  color: #fff;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s ease;
+}
+
+.card-software__title {
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 30px;
+  line-height: 140%;
+}
+
+.card-software__text {
+  line-height: 140%;
+}
+
+.card-software__button {
+  clip-path: polygon(35px 0, 100% 0, 100% 100%, 0% 100%);
+  background-color: rgba(255, 255, 255, 0.199);
+  padding: 16px 16px 16px 40px;
+  margin-bottom: -24px;
+  margin-right: -24px;
+  display: inline-flex;
+  margin-left: auto;
+  margin-top: auto;
+  transition: 0.3s ease;
+}
+
+.card-software:hover {
+  background-color: var(--blue-medium, #515E93);
+}
+
+.card-software:hover .card-software__button {
+  background-color: transparent;
 }
 
 /* common styles */
@@ -5251,6 +5309,10 @@ a[data-tooltip]:hover::before {
     background-size: 130% auto;
   }
 
+  .card-software__button {
+    padding: 24px 24px 24px 48px;
+  }
+
   .create-review__title {
     font-size: 20px;
   }
@@ -5639,6 +5701,11 @@ a[data-tooltip]:hover::before {
     margin-right: -32px;
   }
 
+  .software-cards__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .popup-points {
     width: 60vw;
     max-width: 1070px;
@@ -5779,6 +5846,7 @@ a[data-tooltip]:hover::before {
 
   .about-text-block__text {
     width: calc(100% - 295px);
+    padding-left: 30px;
   }
 
   .card-fb__image {
@@ -5954,6 +6022,7 @@ a[data-tooltip]:hover::before {
 
   .about-text-block__text {
     width: calc(100% - 395px);
+    padding-left: 40px;
   }
 
   .about-text-block__text strong {
@@ -6058,6 +6127,10 @@ a[data-tooltip]:hover::before {
 
   .block-fullpage {
     padding: 80px;
+  }
+
+  .card-software__title {
+    font-size: 20px;
   }
 
   .qi-review small {

@@ -60,8 +60,8 @@ mixin aside-nav(active)
 mixin aside-info(data)
     .aside-info
         .aside-info__title 
-            +icons('#ic_feature', 32)
-            span Особенности системы
+            +icons((data.icon != undefined ? data.icon : '#ic_feature'), 32)
+            span= data.title!= undefined ? data.title : 'Особенности системы'
         .aside-info__desc= data.text
 
 

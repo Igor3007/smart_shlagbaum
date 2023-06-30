@@ -2,6 +2,14 @@
   padding-top: 30px;
   padding-bottom: 60px;
 
+  &--software {
+    & .about-text-block {
+      &__h2 {
+        font-size: 32px;
+      }
+    }
+  }
+
 }
 
 .about-text-block {
@@ -23,6 +31,7 @@
 
     @media screen and (min-width: $w1200) {
       width: 295px;
+
     }
   }
 
@@ -32,10 +41,12 @@
 
     @media screen and (min-width: $w1440) {
       width: calc(100% - 395px);
+      padding-left: 40px;
     }
 
     @media screen and (min-width: $w1200) {
       width: calc(100% - 295px);
+      padding-left: 30px;
     }
 
     & strong {
@@ -47,4 +58,6 @@
       }
     }
   }
+
+
 }
