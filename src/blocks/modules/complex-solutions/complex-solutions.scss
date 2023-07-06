@@ -121,7 +121,9 @@
             }
 
             &__image {
-                opacity: 0;
+                position: relative;
+                z-index: 2;
+                opacity: 1;
 
                 & img {
                     mix-blend-mode: multiply;

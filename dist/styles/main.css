@@ -4246,6 +4246,15 @@ footer {
   font-size: 32px;
 }
 
+.section-about-text-block--software .about-text-block__text {
+  line-height: 150%;
+}
+
+.section-about-text-block--software .about-text-block__text strong {
+  font-weight: 400;
+  font-size: 18px;
+}
+
 .about-text-block__h2 {
   color: var(--text-01, #222429);
   /* H2 */
@@ -4986,7 +4995,9 @@ footer {
 }
 
 .card-solution:hover .card-solution__image {
-  opacity: 0;
+  position: relative;
+  z-index: 2;
+  opacity: 1;
 }
 
 .card-solution:hover .card-solution__image img {
@@ -5036,6 +5047,32 @@ footer {
 }
 
 .form-cooperation__desc {
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--text-01, #222429);
+  padding-bottom: 30px;
+}
+
+.form-contacts__form .btn {
+  max-width: 320px;
+}
+
+.form-contacts .form__subitem label:not(.checkbox) {
+  background-color: #FFFFFF;
+}
+
+.form-contacts__title {
+  color: var(--text-01, #222429);
+  /* H2 */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 133%;
+  font-size: 24px;
+  padding-bottom: 0.8em;
+  line-height: 130%;
+}
+
+.form-contacts__desc {
   font-size: 16px;
   line-height: 140%;
   color: var(--text-01, #222429);
@@ -5735,6 +5772,10 @@ a[data-tooltip]:hover::before {
   .form-cooperation .checkbox {
     font-size: 13px;
   }
+
+  .form-contacts .checkbox {
+    font-size: 13px;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -6063,6 +6104,10 @@ a[data-tooltip]:hover::before {
   }
 
   .form-cooperation__title {
+    font-size: 28px;
+  }
+
+  .form-contacts__title {
     font-size: 28px;
   }
 
@@ -6516,6 +6561,11 @@ a[data-tooltip]:hover::before {
     display: block;
   }
 
+  .section-about-text-block--software .about-text-block__text {
+    width: calc(100% - 295px);
+    padding-left: 30px;
+  }
+
   .about-text-block__wrp {
     display: flex;
   }
@@ -6526,7 +6576,7 @@ a[data-tooltip]:hover::before {
 
   .about-text-block__text {
     width: calc(100% - 295px);
-    padding-left: 30px;
+    padding-left: 0;
   }
 
   .support-text-block__wrp {
@@ -6624,6 +6674,19 @@ a[data-tooltip]:hover::before {
   .form-cooperation__form {
     width: calc(100% - 280px);
     padding-left: 30px;
+  }
+
+  .form-contacts {
+    display: flex;
+  }
+
+  .form-contacts__text {
+    max-width: 280px;
+    width: 100%;
+  }
+
+  .form-contacts__form {
+    width: calc(100% - 280px);
   }
 
   .card-hardware__title {
@@ -6763,6 +6826,15 @@ a[data-tooltip]:hover::before {
     margin-right: -80px;
   }
 
+  .section-about-text-block--software .about-text-block__text {
+    width: calc(100% - 395px);
+    padding-left: 40px;
+  }
+
+  .section-about-text-block--software .about-text-block__text strong {
+    font-size: 20px;
+  }
+
   .about-text-block__h2 {
     font-size: 36px;
   }
@@ -6773,7 +6845,7 @@ a[data-tooltip]:hover::before {
 
   .about-text-block__text {
     width: calc(100% - 395px);
-    padding-left: 40px;
+    padding-left: 0;
   }
 
   .about-text-block__text strong {
@@ -6996,6 +7068,40 @@ a[data-tooltip]:hover::before {
   }
 
   .form-cooperation .checkbox__text {
+    padding-top: 3px;
+  }
+
+  .form-contacts__text {
+    max-width: 395px;
+    width: 100%;
+  }
+
+  .form-contacts__form {
+    width: calc(100% - 395px);
+  }
+
+  .form-contacts__title {
+    font-size: 36px;
+  }
+
+  .form-contacts__title {
+    margin-top: -15px;
+  }
+
+  .form-contacts .checkbox__elem {
+    height: 24px;
+    width: 24px;
+    border-radius: 6px;
+  }
+
+  .form-contacts .checkbox__elem::after {
+    left: 6px;
+    top: 6px;
+    width: 11px;
+    height: 10px;
+  }
+
+  .form-contacts .checkbox__text {
     padding-top: 3px;
   }
 

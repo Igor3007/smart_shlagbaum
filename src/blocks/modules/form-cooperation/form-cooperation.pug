@@ -10,11 +10,11 @@ mixin part()
                             label ФИО*
                             input(type="text" placeholder="Ваше имя" required)
                         .form__subitem
-                            label Номер телефона*
+                            label Номер телефона
                             input(type="text" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ" data-maska="+7(###)###-##-##" required)
                     .form__item
                         .form__subitem
-                            label E-mail
+                            label E-mail*
                             input(type="text" placeholder="Адрес электронной почты")
                         .form__subitem
                             label Тема
@@ -32,10 +32,40 @@ mixin part()
 
 
 mixin part-contacts()
+    .form-contacts
+        .form-contacts__form
+            .form
+                .form__item
+                    .form__subitem
+                        label ФИО*
+                        input(type="text" placeholder="Ваше имя")
+                    .form__subitem
+                        label Номер телефона
+                        input(type="text" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ")
+                .form__item
+                    .form__subitem
+                        label E-mail*
+                        input(type="text" placeholder="Адрес электронной почты")
+                    .form__subitem
+                        label Тема
+                        input(type="text" placeholder="Если хотите уточнить")
+                .form__item
+                    .form__subitem
+                        label Сообщение
+                        textarea(placeholder="Текст сообщения")
+                .form__item
+                    .form__subitem.form__subitem--free
+                        button.btn.btn-full Отправить
+                    .form__subitem.form__subitem--free
+                        .form__note
+                            +checkbox('Ознакомлен с <a href="policy.html" >Политикой конфиденциальности</a>')
+
+
+mixin part-faq()
     .form-cooperation
         .form-cooperation__text
-            .form-cooperation__title Обратная связь
-            .form-cooperation__desc Присоединяйтесь к франшизе, как под нашим флагманским брендом, так и под своим собственным товарным знаком.
+            .form-cooperation__title Задать свой вопрос
+            .form-cooperation__desc
         .form-cooperation__form
             .form
                 .form__item
@@ -43,19 +73,19 @@ mixin part-contacts()
                         label ФИО*
                         input(type="text" placeholder="Ваше имя")
                     .form__subitem
-                        label Номер телефона*
+                        label Номер телефона
                         input(type="text" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ")
                 .form__item
                     .form__subitem
-                        label E-mail
+                        label E-mail*
                         input(type="text" placeholder="Адрес электронной почты")
                     .form__subitem
                         label Тема
                         input(type="text" placeholder="Если хотите уточнить")
                 .form__item
                     .form__subitem
-                        label E-mail
-                        textarea(placeholder="Сообщение")
+                        label Сообщение
+                        textarea(placeholder="Текст сообщения")
                 .form__item
                     .form__subitem.form__subitem--free
                         button.btn.btn-full Отправить
@@ -71,6 +101,9 @@ mixin form-cooperation--white()
 mixin form-cooperation()
     section.section-form-cooperation
         +part()
+mixin form-cooperation-faq()
+    section.section-form-cooperation.section-form-cooperation--white
+        +part-faq()
 mixin form-contacts()
     section.section-form-cooperation.section-form-cooperation--white
         +part-contacts()

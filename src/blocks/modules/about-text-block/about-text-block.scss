@@ -4,9 +4,34 @@
 
   &--software {
     & .about-text-block {
+
       &__h2 {
         font-size: 32px;
       }
+      &__text {
+
+        line-height: 150%;
+
+        @media screen and (min-width: $w1440) {
+          width: calc(100% - 395px);
+          padding-left: 40px;
+        }
+
+        @media screen and (min-width: $w1200) {
+          width: calc(100% - 295px);
+          padding-left: 30px;
+        }
+
+        & strong {
+          font-weight: 400;
+          font-size: 18px;
+
+          @media screen and (min-width: $w1440) {
+            font-size: 20px;
+          }
+        }
+      }
+
     }
   }
 
@@ -41,12 +66,12 @@
 
     @media screen and (min-width: $w1440) {
       width: calc(100% - 395px);
-      padding-left: 40px;
+      padding-left: 0;
     }
 
     @media screen and (min-width: $w1200) {
       width: calc(100% - 295px);
-      padding-left: 30px;
+      padding-left: 0;
     }
 
     & strong {
@@ -61,3 +86,4 @@
 
 
 }
+

@@ -12,11 +12,11 @@ mixin popup-form(data)
                                 input(type="text" placeholder="Ваше имя" required)
                         .form__item
                             .form__subitem
-                                label Номер телефона*
+                                label Номер телефона
                                 input(type="text" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ" data-maska="+7(###)###-##-##" required)
                         .form__item
                             .form__subitem
-                                label E-mail
+                                label E-mail*
                                 input(type="text" placeholder="Адрес электронной почты")
                         .form__item
                             .form__subitem
@@ -24,7 +24,7 @@ mixin popup-form(data)
                                 input(type="text" placeholder="Если хотите уточнить")
                         .form__item
                             .form__subitem
-                                label E-mail
+                                label Вопрос
                                 textarea(placeholder="Сообщение")
                         .form__item
                             .form__subitem.form__subitem--free
