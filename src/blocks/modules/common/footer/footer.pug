@@ -20,30 +20,17 @@ include ../../common/main-menu/main-menu.pug
                         .footer-menu__title О компании
                         .footer-menu__list
                             ul
-                                li: a(href='#') О нас
-                                li: a(href='#') Программное обеспечение
-                                li: a(href='#') Оборудование
-                                li: a(href='#') Техподдержка
-                                li: a(href='#') Вопросы и ответы
-                                li: a(href='#') Франшиза
-                                li: a(href='#') Обратная связь
-                                li: a(href='#') Политика конфиденциальности
+                                each item in app.mainMenu
+                                    li: a(href=item.href)= item.text
+                                
+                              
 
                     .footer-menu__item
                         .footer-menu__title Особенности системы
                         .footer-menu__list
                             ul
-                                li: a(href='#') Распознавание спецтранспорта
-                                li: a(href='#') Распознавание госномеров и гражданских ТС
-                                li: a(href='#') Вспомогательные методы открытия
-                                li: a(href='#') Видеонаблюдение и видеоаналитика
-                                li: a(href='#') Надёжное конечное устройство
-                                li: a(href='#') Дворы многоквартирных домов
-                                li: a(href='#') Многоуровневые и плоскостные паркинги
-                                li: a(href='#') Дачные и котеджные поселки
-                                li: a(href='#') Торговые центры, магазины и рестораны
-                                li: a(href='#') Гостиницы и дома отдыха
-                                li: a(href='#') Промышленные, складские и логистические центры
+                                each item in app.asidenav
+                                    li: a(href=item.href)= item.text
         .footer-bottom
             .footer-copyright © 2023, ООО «Мои умные сервисы». Все права защищены
             .footer-developer
